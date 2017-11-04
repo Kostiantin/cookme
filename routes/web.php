@@ -10,11 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+echo Linguist::workingLocale();die;
 
 Auth::routes();
 
 Route::get('/', 'IndexController@index');
+

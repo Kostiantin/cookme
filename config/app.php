@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'CookMe'),
 
     /*
     |--------------------------------------------------------------------------
@@ -163,6 +163,7 @@ return [
         Waavi\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Keevitaja\Linguist\LinguistServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -226,7 +227,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'Linguist'  => Keevitaja\Linguist\Facades\LinguistFacade::class,
+        'LinguistHtml'  => Keevitaja\Linguist\Facades\HtmlBuilderFacade::class
     ],
 
 ];

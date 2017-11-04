@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3f7d33180b967dcb4d858a169f0ea4fa",
+    "content-hash": "dda782124943d1c0d03dcedcaeb02c37",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -637,6 +637,67 @@
                 }
             ],
             "time": "2015-04-20T18:58:01+00:00"
+        },
+        {
+            "name": "keevitaja/linguist",
+            "version": "1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/keevitaja/linguist.git",
+                "reference": "9d89cd7d22a06dbb34e1729514736135b3bde30f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/keevitaja/linguist/zipball/9d89cd7d22a06dbb34e1729514736135b3bde30f",
+                "reference": "9d89cd7d22a06dbb34e1729514736135b3bde30f",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.1",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~3.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Keevitaja\\Linguist\\LinguistServiceProvider"
+                    ],
+                    "aliases": {
+                        "Linguist": "Keevitaja\\Linguist\\Facades\\LinguistFacade",
+                        "LinguistHtml": "Keevitaja\\Linguist\\Facades\\HtmlBuilderFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Keevitaja\\Linguist\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tanel Tammik",
+                    "email": "keevitaja@gmail.com"
+                }
+            ],
+            "description": "Easy localization for the Laravel framework",
+            "keywords": [
+                "i18n",
+                "laravel",
+                "localization",
+                "multilingual",
+                "php"
+            ],
+            "time": "2017-10-27T06:24:10+00:00"
         },
         {
             "name": "laravel/framework",
