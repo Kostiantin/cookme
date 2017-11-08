@@ -8351,24 +8351,38 @@ button.close {
 }
 /*custom navbar styles*/
 .navbar-transparent {
-  background-color: transparent;
-  border-color: transparent;
+    background-color: rgba(0,0,0,0.3);
+    border-color: transparent;
 }
 .navbar-default .navbar-brand,.navbar-default .navbar-nav > li > a {
-  color: #fff;
+    color: #fff;
+    height: 80px;
+    line-height: 50px;
+    text-shadow: 1px 1px 1px #000000;
+}
+.navbar-default .navbar-nav > li > a {
+    font-size: 16px;
+    font-weight: bold;
+}
+.navbar-default .navbar-nav > li > a:hover,.navbar-default .navbar-nav > li > a:focus {
+    color: #FF4800;
+
 }
 /*custom navbar styles end*/
 /*swiper on index page*/
 .swiper-container.home-slider {
-  width: 100%;
-  height: 600px;
+    width: 100%;
+    height: 600px;
 }
 .home-slider .swiper-slide {
-  height: 600px;
+    height: 600px;
 }
 .home-slider .swiper-lazy.swiper-lazy-loaded {
-  height: 600px;
-  background-position: center center;
-  background-size: cover;
+    height: 600px;
+    background-position: center center;
+    background-size: cover;
+}
+.swiper-pagination-bullet-active {
+    background-color: #0adc09!important;
 }
 /*swiper on index page end*/
