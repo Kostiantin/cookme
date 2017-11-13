@@ -1,0 +1,5 @@
+ID,namespace,group,item,English,Russian RU
+0,*,everywhere,login,Login,Войти
+0,*,everywhere,register,Join,Зарегистрироваться
+0,*,everywhere,logout,Logout,Выйти
+0,*,everywhere,languages,Languages,Языки

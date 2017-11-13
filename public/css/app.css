@@ -8353,6 +8353,7 @@ button.close {
 .navbar-transparent {
     background-color: rgba(0,0,0,0.3);
     border-color: transparent;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
 }
 .navbar-default .navbar-brand,.navbar-default .navbar-nav > li > a {
     color: #fff;
@@ -8361,13 +8362,61 @@ button.close {
     text-shadow: 1px 1px 1px #000000;
 }
 .navbar-default .navbar-nav > li > a {
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 15px;
+    font-weight: normal;
 }
-.navbar-default .navbar-nav > li > a:hover,.navbar-default .navbar-nav > li > a:focus {
+.navbar-default .navbar-nav > li > a:hover,.navbar-default .navbar-nav > li > a:focus,.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
     color: #FF4800;
-
 }
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    text-shadow: none;
+    background-color: rgba(0,0,0,0.5);
+}
+.navbar-nav > li > .dropdown-menu {
+    text-align: center;
+    width: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    min-width: 100px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
+}
+.navbar-nav > li > .dropdown-menu a {
+    color: #FF4800;
+}
+.navbar-nav > li > .dropdown-menu a:hover, .navbar-nav > li > .dropdown-menu a:focus {
+    text-decoration: none;
+    color: #fff;
+}
+/* languages flags */
+.lng-flags {
+    display: table!important;
+    width: 100%;
+}
+.lng-flags span.flag-container {
+    background-image: url("/img/flags_and_other.png");
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 8px;
+    margin-right: 5px;
+    display: block;
+    position: relative;
+    top: 0px;
+}
+.lng-flags span.lng-name {
+    display: table-cell;
+}
+.lng-flags span.flag-container.en {
+    background-position: -65px -198px;
+}
+.lng-flags span.flag-container.ru {
+    background-position: -65px -162px;
+}
+/* languages flags end */
 /*custom navbar styles end*/
 /*swiper on index page*/
 .swiper-container.home-slider {

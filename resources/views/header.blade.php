@@ -24,6 +24,20 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
+                @if (count($languages) > 0)
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle lng-flags" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="flag-container {{$currLang->locale}}"></span><span class="lng-name">{{$currLang->name}}</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            @foreach($languages as $language)
+                                @if($currLang->locale != $language->locale)
+                                     <a class="dropdown-item lng-flags" href="/{{$language->locale}}"><span class="flag-container {{$language->locale}}"></span><span class="lng-name">{{$language->name}}</span></a>
+                                @endif
+                            @endforeach
+                        </div>
+                    </li>
+                @endif
                 <!-- Authentication Links -->
                 @if (Auth::guest())
                     <li><a href="{{ route('login') }}">@lang('everywhere.login')</a></li>
