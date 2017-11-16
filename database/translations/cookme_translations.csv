@@ -1,5 +1,6 @@
-ID,namespace,group,item,English,Russian RU
-0,*,everywhere,login,Login,Войти
-0,*,everywhere,register,Join,Зарегистрироваться
-0,*,everywhere,logout,Logout,Выйти
-0,*,everywhere,languages,Languages,Языки
+ID,namespace,group,item,English,Ukrainian UA,Russian RU
+0,*,everywhere,login,Login,Увійти,Войти
+0,*,everywhere,register,Join,Реєстрація,Зарегистрироваться
+0,*,everywhere,logout,Logout,Вийти,Выйти
+0,*,everywhere,languages,Languages,Мови,Языки
+0,*,everywhere,user,User,Користувач,Пользователь

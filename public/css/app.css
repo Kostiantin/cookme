@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@charset "UTF-8";
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);@charset "UTF-8";
 
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -8363,7 +8364,7 @@ button.close {
 }
 .navbar-default .navbar-nav > li > a {
     font-size: 15px;
-    font-weight: normal;
+    font-weight: bold;
 }
 .navbar-default .navbar-nav > li > a:hover,.navbar-default .navbar-nav > li > a:focus,.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
     color: #FF4800;
@@ -8379,18 +8380,20 @@ button.close {
     padding-right: 15px;
     background-color: rgba(0,0,0,0.5);
     border: none;
-    min-width: 100px;
+    min-width: 100%;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     -ms-border-radius: 0px;
     border-radius: 0px;
 }
 .navbar-nav > li > .dropdown-menu a {
-    color: #FF4800;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000000;
+    line-height: 30px;
 }
 .navbar-nav > li > .dropdown-menu a:hover, .navbar-nav > li > .dropdown-menu a:focus {
     text-decoration: none;
-    color: #fff;
+    color: #FF4800;
 }
 /* languages flags */
 .lng-flags {
@@ -8416,7 +8419,28 @@ button.close {
 .lng-flags span.flag-container.ru {
     background-position: -65px -162px;
 }
+.lng-flags span.flag-container.ua {
+  background-position: -26px -198px;
+}
+.navbar-nav > li > .dropdown-menu a {
+    font-weight: bold;
+}
+.nav-link.dropdown-toggle.lng-flags i.fa-caret-down, .user-links i.fa-caret-down {
+    font-size: 12px;
+}
 /* languages flags end */
+/* user links */
+.nav-item.dropdown.user-links .dropdown-menu {
+    text-align: left;
+}
+.user-links i.fa-user, .user-links i.fa-sign-in, .user-links i.fa-user-plus {
+    color: #73c900!important;
+    margin-right: 0px;
+    font-size: 12px;
+    position: relative;
+    bottom: 1px;
+}
+/* user links end */
 /*custom navbar styles end*/
 /*swiper on index page*/
 .swiper-container.home-slider {
@@ -8432,6 +8456,6 @@ button.close {
     background-size: cover;
 }
 .swiper-pagination-bullet-active {
-    background-color: #0adc09!important;
+    background-color: #73c900!important;
 }
 /*swiper on index page end*/

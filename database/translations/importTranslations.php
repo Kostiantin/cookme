@@ -36,7 +36,8 @@ $mysqli->query($createTableSql);
 
 $langsConfig = [
     "en" => 4,
-    "ru" => 5,
+    "ua" => 5,
+    "ru" => 6,
 ];
 
 $handle = fopen("cookme_translations.csv", "r");

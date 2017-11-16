@@ -27,7 +27,8 @@
                 @if (count($languages) > 0)
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle lng-flags" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="flag-container {{$currLang->locale}}"></span><span class="lng-name">{{$currLang->name}}</span>
+                            <span class="flag-container {{$currLang->locale}}"></span><span class="lng-name">{{$currLang->name}}</span>&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i>
+
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             @foreach($languages as $language)
@@ -40,8 +41,16 @@
                 @endif
                 <!-- Authentication Links -->
                 @if (Auth::guest())
-                    <li><a href="{{ route('login') }}">@lang('everywhere.login')</a></li>
-                    <li><a href="{{ route('register') }}">@lang('everywhere.register')</a></li>
+                        <li class="nav-item dropdown user-links">
+                            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-user" aria-hidden="true"></i>&nbsp;<span class="user-icons">@lang('everywhere.user')</span>&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i>
+
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a href="{{ route('login') }}"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;<span class="user-icons">@lang('everywhere.login')</span></a>
+                                <a href="{{ route('register') }}"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;<span class="user-icons">@lang('everywhere.register')</span></a>
+                            </div>
+                        </li>
                 @else
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
