@@ -8389,16 +8389,31 @@ button.close {
 .navbar-nav > li > .dropdown-menu a {
     color: #fff;
     text-shadow: 1px 1px 1px #000000;
-    line-height: 30px;
 }
 .navbar-nav > li > .dropdown-menu a:hover, .navbar-nav > li > .dropdown-menu a:focus {
     text-decoration: none;
     color: #FF4800;
 }
 /* languages flags */
-.lng-flags {
-    display: table!important;
+ul.langs {
+    display: block;
     width: 100%;
+    text-align: left;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+}
+ul.langs li {
+    display: block;
+    height: 30px;
+    padding: 10px 0px;
+    line-height: 30px;
+    float: none;
+    width: 100%;
+}
+.lng-flags {
+    display: block;
+    min-width: 100px;
 }
 .lng-flags span.flag-container {
     background-image: url("/img/flags_and_other.png");
@@ -8408,10 +8423,15 @@ button.close {
     margin-right: 5px;
     display: block;
     position: relative;
-    top: 0px;
+    top: 11px;
+    float: left
+}
+.dropdown-toggle.lng-flags span.flag-container {
+    top: 21px;
 }
 .lng-flags span.lng-name {
-    display: table-cell;
+    display: block;
+    float: left;
 }
 .lng-flags span.flag-container.en {
     background-position: -65px -198px;
@@ -8424,6 +8444,8 @@ button.close {
 }
 .navbar-nav > li > .dropdown-menu a {
     font-weight: bold;
+    text-align: left;
+    display: block;
 }
 .nav-link.dropdown-toggle.lng-flags i.fa-caret-down, .user-links i.fa-caret-down {
     font-size: 12px;
@@ -8435,10 +8457,15 @@ button.close {
 }
 .user-links i.fa-user, .user-links i.fa-sign-in, .user-links i.fa-user-plus {
     color: #73c900!important;
-    margin-right: 0px;
+    margin-right: 3px;
     font-size: 12px;
     position: relative;
     bottom: 1px;
+    display: inline;
+}
+.navbar-nav > li.dropdown.user-links > .dropdown-menu a {
+    line-height: 30px;
+    padding-top: 5px;
 }
 /* user links end */
 /*custom navbar styles end*/

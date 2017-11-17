@@ -31,11 +31,18 @@
 
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            @foreach($languages as $language)
-                                @if($currLang->locale != $language->locale)
-                                     <a class="dropdown-item lng-flags" href="/{{$language->locale}}"><span class="flag-container {{$language->locale}}"></span><span class="lng-name">{{$language->name}}</span></a>
-                                @endif
-                            @endforeach
+                            <ul class="langs">
+                                @foreach($languages as $language)
+                                    @if($currLang->locale != $language->locale)
+                                        <li>
+                                            <a class="dropdown-item lng-flags" href="/{{$language->locale}}">
+                                                <span class="flag-container {{$language->locale}}"></span>
+                                                <span class="lng-name">{{$language->name}}</span>
+                                            </a>
+                                        </li>
+                                    @endif
+                                @endforeach
+                            </ul>
                         </div>
                     </li>
                 @endif
