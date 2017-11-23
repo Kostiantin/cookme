@@ -8,7 +8,16 @@
         <!-- Slides -->
         <div class="swiper-slide">
             <div data-background="{{ asset('img/home_slider/image1.jpg') }}" class="swiper-lazy">
-
+              <div class="slide-caption">
+                  <div class="slide-caption-content">
+                      <p class="c-text">
+                          Have cooking questions?
+                      </p>
+                      <a class="slider-link" href="#">
+                          Ask Chef
+                      </a>
+                  </div>
+              </div>
             </div>
         </div>
         <div class="swiper-slide">
@@ -24,7 +33,19 @@
     </div>
     <!-- If we need pagination -->
     <div class="swiper-pagination"></div>
-
+    <div id="social-menu">
+        <ul>
+            <li>
+                <a target="_blank" href="#" class="fb"></a>
+            </li>
+            <li>
+                <a target="_blank" href="#" class="lin"></a>
+            </li>
+            <li>
+                <a target="_blank" href="#" class="twt"></a>
+            </li>
+        </ul>
+    </div>
 </div>
 <div class="container">
     <div class="row">
@@ -44,7 +65,7 @@
             delay: 8000
         },
         // Optional parameters
-        direction: 'horizontal',
+        direction: 'vertical',
         loop: true,
 
         // If we need pagination
