@@ -11,10 +11,10 @@
               <div class="slide-caption">
                   <div class="slide-caption-content">
                       <p class="c-text">
-                          Have cooking questions?
+                          @lang('everywhere.have_cooking_questions')
                       </p>
                       <a class="slider-link" href="#">
-                          Ask Chef
+                          @lang('everywhere.ask_chef')
                       </a>
                   </div>
               </div>
@@ -22,12 +22,44 @@
         </div>
         <div class="swiper-slide">
             <div style="background-image:url('{{ asset('img/home_slider/image2.jpg') }}')" class="swiper-lazy swiper-lazy-loaded">
-
+                <div class="slide-caption">
+                    <div class="slide-caption-content">
+                        <p class="c-text">
+                            @lang('everywhere.simple_products_delicious_diches')
+                        </p>
+                        <a class="slider-link" href="#">
+                            @lang('everywhere.check_recipes')
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="swiper-slide">
             <div style="background-image:url('{{ asset('img/home_slider/image3.jpg') }}')" class="swiper-lazy swiper-lazy-loaded">
-
+                <div class="slide-caption">
+                    <div class="slide-caption-content">
+                        <p class="c-text">
+                            @lang('everywhere.meat_cuisine')
+                        </p>
+                        <a class="slider-link" href="#">
+                            @lang('everywhere.cook_me')
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div style="background-image:url('{{ asset('img/home_slider/image4.jpg') }}')" class="swiper-lazy swiper-lazy-loaded">
+                <div class="slide-caption">
+                    <div class="slide-caption-content">
+                        <p class="c-text">
+                            @lang('everywhere.healthy_breakfast_recipes')
+                        </p>
+                        <a class="slider-link" href="#">
+                            @lang('everywhere.try_it')
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -4,3 +4,11 @@ ID,namespace,group,item,English,Ukrainian UA,Russian RU
 0,*,everywhere,logout,Logout,Вийти,Выйти
 0,*,everywhere,languages,Languages,Мови,Языки
 0,*,everywhere,user,User,Користувач,Пользователь
+0,*,everywhere,have_cooking_questions,Have cooking questions?,Є кулінарні питання?,Есть кулинарные вопросы?
+0,*,everywhere,ask_chef,Ask Chef,Запитай шефа,Спроси шефа
+0,*,everywhere,simple_products_delicious_diches,"Simple products, delicious dishes!","Прості продукти, смачні страви!","Простые продукты, вкусные блюда!"
+0,*,everywhere,check_recipes,Check Recipes,Рецепти,Рецепты
+0,*,everywhere,meat_cuisine,Meat cuisine,М'ясні страви,Мясные блюда
+0,*,everywhere,cook_me,Cook Me,Приготувати,Приготовить
+0,*,everywhere,healthy_breakfast_recipes,Healthy breakfast recipes,Рецепти здорового сніданку,Рецепты здорового завтрака
+0,*,everywhere,try_it,Try it!,Спробуй!,Попробуй!
