@@ -107,4 +107,8 @@
         }
     });
 </script>
+
+<section class="middle-content">
+
+</section>
 @endsection
