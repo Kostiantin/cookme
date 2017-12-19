@@ -20,7 +20,7 @@ class AppServiceProvider extends ServiceProvider
 
         app('view')->share('currLang', $currLang);
         // variables for layouts/app.blade file
-        app('view')->composer('layouts.app', function ($view) {
+        app('view')->composer('layouts.master', function ($view) {
 
             $languages = TranslatorLanguages::get()->where('active','=', '1');
 

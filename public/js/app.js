@@ -42746,9 +42746,3 @@ if (false) {
 
 /***/ })
 /******/ ]);
-jQuery(document).ready(function($) {
-  $('#_scrl_top').click(function(){
-    $("html, body").animate({ scrollTop: 0 }, 1600);
-    return false;
-  });
-});

@@ -1,4 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.master')
+
+@section('title')
+    <title>{{ config('app.name', 'CookMe') }}</title>
+@endsection
 
 @section('content')
         <!-- Slider main container -->
@@ -81,34 +85,46 @@
 </div>
 <div class="container">
     <div class="row">
-
+        <div class="col-xs-12 col-sm-12 col-md-12 text-content index-text-content">
+            Some text
+        </div>
     </div>
 </div>
-<script src="{{ asset('js/swiper.min.js') }}"></script>
-
-<script>
-    var mySwiper = new Swiper ('.swiper-container', {
-        lazy: true,
-        preloadImages: true,
-        loadPrevNextAmount: 2,
-        loadPrevNext: true,
-        speed: 1100,
-        autoplay: {
-            delay: 8000
-        },
-        // Optional parameters
-        direction: 'vertical',
-        loop: true,
-
-        // If we need pagination
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true
-        }
-    });
-</script>
-
 <section class="middle-content">
 
 </section>
+@endsection
+
+@section('custom_js')
+    <script src="{{ asset('js/swiper.min.js') }}"></script>
+
+    <script>
+        var mySwiper = new Swiper ('.swiper-container', {
+            lazy: true,
+            preloadImages: true,
+            loadPrevNextAmount: 2,
+            loadPrevNext: true,
+            speed: 1100,
+            autoplay: {
+                delay: 8000
+            },
+            // Optional parameters
+            direction: 'vertical',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            }
+        });
+    </script>
+    <script>
+        jQuery(document).ready(function($) {
+            $('#_scrl_top').click(function(){
+                $("html, body").animate({ scrollTop: 0 }, 1600);
+                return false;
+            });
+        });
+    </script>
 @endsection
