@@ -276,5 +276,10 @@
         color: #fff;
     }
     /*footer end*/
+    /*main content*/
+    .main-content {
+        padding-top: 100px;
+    }
+    /*main content end*/
 </style>
 
