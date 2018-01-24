@@ -4,6 +4,6 @@
 
 </head>
 <body>
-    <h1>Welcome to {{ config('app.name', 'CookMe') }}</h1>
+    <h1>@lang('everywhere.welcome_to') {{ config('app.name', 'CookMe') }}</h1>
 </body>
 </html>

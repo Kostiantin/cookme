@@ -10,7 +10,8 @@
         "keevitaja/linguist": "1.0.5",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
-        "waavi/translation": "2.2.2"
+        "waavi/translation": "2.2.2",
+        "creativeorange/gravatar": "~1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

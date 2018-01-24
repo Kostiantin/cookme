@@ -164,6 +164,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Keevitaja\Linguist\LinguistServiceProvider::class,
+        Creativeorange\Gravatar\GravatarServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -228,7 +229,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Linguist'  => Keevitaja\Linguist\Facades\LinguistFacade::class,
-        'LinguistHtml'  => Keevitaja\Linguist\Facades\HtmlBuilderFacade::class
+        'LinguistHtml'  => Keevitaja\Linguist\Facades\HtmlBuilderFacade::class,
+        'Gravatar' => Creativeorange\Gravatar\Facades\Gravatar::class,
     ],
 
 ];
