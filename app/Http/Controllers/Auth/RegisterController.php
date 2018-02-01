@@ -73,6 +73,9 @@ class RegisterController extends Controller
 
         \Mail::to($user)->send(new Welcome);
 
+        // one time welcome message on top of page
+        session()->flash('message', trans('everywhere.welcome_to').' '.config('app.name', 'CookMe').' ;)');
+
         return $user;
     }
 }

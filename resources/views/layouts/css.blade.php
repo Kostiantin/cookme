@@ -293,5 +293,20 @@
         box-shadow: 0 0 0 3px #f00;
     }
 
+    body.stop-scrolling {
+        overflow: auto;
+    }
+    .custom-alert {
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        padding: 10px;
+        color: #000088;
+        background-color: rgba(255,255,255,0.7);
+        font-size: 13px;
+        z-index: 99;
+        line-height: 15px;
+        font-weight: bold;
+    }
 </style>
 

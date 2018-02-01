@@ -165,7 +165,6 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Keevitaja\Linguist\LinguistServiceProvider::class,
         Creativeorange\Gravatar\GravatarServiceProvider::class,
-
         /*
          * Package Service Providers...
          */
