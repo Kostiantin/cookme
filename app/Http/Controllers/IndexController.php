@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+//use App\Http\Traits\GeneralFunctions;
+
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
+
+    //use GeneralFunctions;
     /**
      * Create a new controller instance.
      *
@@ -23,6 +27,7 @@ class IndexController extends Controller
      */
     public function index()
     {
+        //echo $this->callMyTest();die;
         return view('index.index');
     }
 }

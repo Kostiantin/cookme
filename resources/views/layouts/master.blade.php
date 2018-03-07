@@ -21,6 +21,7 @@
 
 </head>
 <body>
+@include('layouts.facebook')
 @if(Session::has('message'))
     <div class="custom-alert">{{ Session::get('message') }}</div>
 @endif
