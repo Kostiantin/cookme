@@ -56,7 +56,10 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <a href="{{ route('login') }}"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;<span class="user-icons">@lang('everywhere.login')</span></a>
                                 <a href="{{ route('register') }}"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;<span class="user-icons">@lang('everywhere.register')</span></a>
-                                <div class="fb-login-button" data-width="140" data-size="small" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true" data-scope="public_profile,email"></div>
+                                <a href="/auth/facebook">
+                                    <i class="fa fa-facebook"></i>&nbsp;@lang('everywhere.facebook_login')
+                                </a>
+                                <!--<div class="fb-login-button" data-width="140" data-size="small" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true" data-scope="public_profile,email"></div>-->
                             </div>
                         </li>
                 @else
@@ -65,17 +68,25 @@
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
 
-                        <ul class="dropdown-menu" role="menu">
+                        <ul class="dropdown-menu user-links" role="menu">
+                            <li>
+                                <a href="/user/profile">
+                                    <i class="fa fa-address-book"></i>&nbsp;@lang('everywhere.profile')
+                                </a>
+                            </li>
                             <li>
                                 <a href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                    @lang('everywhere.logout')
+                                    <i class="fa fa-sign-out"></i>&nbsp;@lang('everywhere.logout')
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     {{ csrf_field() }}
                                 </form>
+                                <!--<a class="user-links" href="/auth/facebook">
+                                    <i class="fa fa-facebook"></i>&nbsp;Logout
+                                </a>-->
                             </li>
                         </ul>
                     </li>

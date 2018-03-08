@@ -96,6 +96,10 @@
         font-weight: bold;
         text-align: left;
         display: block;
+        min-width: 140px;
+    }
+    .navbar-nav .dropdown-menu > li > a:hover {
+        background-color: transparent;
     }
     .nav-link.dropdown-toggle.lng-flags i.fa-caret-down, .user-links i.fa-caret-down {
         font-size: 12px;
@@ -106,7 +110,7 @@
         text-align: left;
         padding-top: 15px;
     }
-    .user-links i.fa-user, .user-links i.fa-sign-in, .user-links i.fa-user-plus {
+    .user-links i.fa-user, .user-links i.fa-sign-in, .user-links i.fa-user-plus, .user-links i.fa-facebook, .user-links i.fa {
         color: #73c900!important;
         margin-right: 3px;
         font-size: 12px;
@@ -229,7 +233,7 @@
     /*social menu end*/
     /*index page content*/
     .text-content {
-        background-image: url(/img/bg_green.jpg);
+        background-image: url(/img/bg_cook.svg);
         background-color: #fff;
         background-repeat: repeat;
         background-position:left top;

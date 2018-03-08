@@ -13,4 +13,6 @@ ID,namespace,group,item,English,Ukrainian UA,Russian RU
 0,*,everywhere,healthy_breakfast_recipes,Healthy breakfast recipes,Рецепти здорового сніданку,Рецепты здорового завтрака
 0,*,everywhere,try_it,Try it!,Спробуй!,Попробуй!
 0,*,everywhere,welcome_to,Welcome to,Ласкаво просимо до,Добро пожаловать в
-0,*,everywhere,hello,hello,здоровенькі були,
+0,*,everywhere,hello,hello,здоровенькі були,привет
+0,*,everywhere,profile,Profile,Профіль,Профиль
+0,*,everywhere,facebook_login,Facebook Login,Вхід з Facebook,Вход с Facebook
