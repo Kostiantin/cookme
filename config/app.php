@@ -165,7 +165,6 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Keevitaja\Linguist\LinguistServiceProvider::class,
         Creativeorange\Gravatar\GravatarServiceProvider::class,
-        Laravel\Socialite\SocialiteServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -231,7 +230,6 @@ return [
         'Linguist'  => Keevitaja\Linguist\Facades\LinguistFacade::class,
         'LinguistHtml'  => Keevitaja\Linguist\Facades\HtmlBuilderFacade::class,
         'Gravatar' => Creativeorange\Gravatar\Facades\Gravatar::class,
-        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     ],
 
 ];

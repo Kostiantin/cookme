@@ -10,7 +10,6 @@
         "doctrine/dbal": "^2.5",
         "keevitaja/linguist": "1.0.5",
         "laravel/framework": "5.4.*",
-        "laravel/socialite": "^3.0",
         "laravel/tinker": "~1.0",
         "waavi/translation": "2.2.2"
     },
