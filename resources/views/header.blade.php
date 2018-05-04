@@ -24,20 +24,20 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
-                @if (count($languages) > 0)
+                @if (count($altLocalizedUrls) > 0)
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle lng-flags" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="flag-container {{$currLang->locale}}"></span><span class="lng-name">{{$currLang->name}}</span>&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i>
+                            <span class="flag-container {{$currentLanguage->locale}}"></span><span class="lng-name">{{$currentLanguage->name}}</span>&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i>
 
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <ul class="langs">
-                                @foreach($languages as $language)
-                                    @if($currLang->locale != $language->locale)
+                                @foreach($altLocalizedUrls as $language)
+                                    @if($currentLanguage->locale != $language['locale'])
                                         <li>
-                                            <a class="dropdown-item lng-flags" href="/{{$language->locale}}">
-                                                <span class="flag-container {{$language->locale}}"></span>
-                                                <span class="lng-name">{{$language->name}}</span>
+                                            <a class="dropdown-item lng-flags" href="/{{$language['locale']}}">
+                                                <span class="flag-container {{$language['locale']}}"></span>
+                                                <span class="lng-name">{{$language['name']}}</span>
                                             </a>
                                         </li>
                                     @endif

@@ -15,16 +15,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $currLocale = Config::get('app.locale');
-        $currLang = TranslatorLanguages::get()->where('active','=', '1')->where('locale', '=', $currLocale)->first();
-
-        app('view')->share('currLang', $currLang);
         // variables for layouts/app.blade file
         app('view')->composer('layouts.master', function ($view) {
-
-            $languages = TranslatorLanguages::get()->where('active','=', '1');
-
-
 
             $action = app('request')->route()->getAction();
 
@@ -32,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
 
             list($controller, $action) = explode('@', $controller);
 
-            $view->with(compact('controller', 'action', 'languages'));
+            $view->with(compact('controller', 'action'));
         });
     }
 

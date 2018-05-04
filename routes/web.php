@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Support\Facades\Config;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,8 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+$localizer = \App::make(\Waavi\Translation\UriLocalizer::class);
 
-Auth::routes();
-
-Route::get('/', 'IndexController@index');
+Route::group(['prefix' => $localizer->localeFromRequest()], function(){
+    /* Your routes here */
+    Route::get('/', 'IndexController@index');
+    Auth::routes();
+});
 

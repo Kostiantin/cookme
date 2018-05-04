@@ -30,18 +30,19 @@ class CreateLangsTable extends Migration
         ];
 
         //create table
-        Schema::create('languages', function (Blueprint $table) {
+        Schema::create('translator_languages', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('locale', '250');
-            $table->string('name', '250');
-            $table->integer('active')->default(1);
+            $table->string('locale', 6)->unique();
+            $table->string('name', 60)->unique();
+            $table->timestamps();
+            $table->softDeletes();
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_unicode_ci';
         });
 
         // Insert languages
         foreach ($aLangs as $lang) {
-            DB::table('languages')->insert(
+            DB::table('translator_languages')->insert(
                 array(
                     'locale' => $lang['locale'],
                     'name' => $lang['name'],

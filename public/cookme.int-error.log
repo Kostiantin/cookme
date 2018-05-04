@@ -1,0 +1,5 @@
+[Thu May 03 07:12:01.135235 2018] [php7:error] [pid 3680:tid 1576] [client 127.0.0.1:50697] PHP Fatal error:  Class 'Keevitaja\\Linguist\\Http\\Kernel' not found in D:\\Projects\\cookme\\app\\Http\\Kernel.php on line 8
+[Thu May 03 07:13:16.868647 2018] [php7:error] [pid 3680:tid 1576] [client 127.0.0.1:50702] PHP Fatal error:  Class 'Keevitaja\\Linguist\\Http\\Kernel' not found in D:\\Projects\\cookme\\app\\Http\\Kernel.php on line 8
+[Thu May 03 07:13:19.183720 2018] [php7:error] [pid 3680:tid 1576] [client 127.0.0.1:50702] PHP Fatal error:  Class 'Keevitaja\\Linguist\\Http\\Kernel' not found in D:\\Projects\\cookme\\app\\Http\\Kernel.php on line 8
+[Thu May 03 07:35:00.451894 2018] [php7:error] [pid 3680:tid 1564] [client 127.0.0.1:50898] PHP Fatal error:  Interface 'Illuminate\\Translation\\LoaderInterface' not found in D:\\Projects\\cookme\\vendor\\waavi\\translation\\src\\Loaders\\Loader.php on line 8
+[Thu May 03 07:37:00.664424 2018] [php7:error] [pid 3680:tid 1564] [client 127.0.0.1:50976] PHP Fatal error:  Class 'Keevitaja\\Linguist\\Http\\Kernel' not found in D:\\Projects\\cookme\\app\\Http\\Kernel.php on line 8
