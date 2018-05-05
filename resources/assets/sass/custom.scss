@@ -119,6 +119,12 @@ ul.langs li {
   bottom: 1px;
   display: inline;
 }
+.user-links i.fa.fa-caret-down {
+  color: #fff!important;
+}
+.user-links .nav-link:hover i.fa.fa-caret-down,.user-links .nav-link:focus i.fa.fa-caret-down {
+  color: #fe6d0d!important;
+}
 .navbar-nav > li.dropdown.user-links > .dropdown-menu a {
   line-height: 30px;
 }
