@@ -83,10 +83,13 @@
         </ul>
     </div>
 </div>
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 text-content index-text-content">
-            Some text
+<div class="what-we-do">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-content index-text-content">
+                <h2>@lang('everywhere.what_we_do')</h2>
+                <p>@lang('everywhere.want_to_unite'). @lang('everywhere.here_you_can')</p>
+            </div>
         </div>
     </div>
 </div>
@@ -106,7 +109,7 @@
             loadPrevNext: true,
             speed: 1100,
             autoplay: {
-                delay: 8000
+                delay: 10000
             },
             // Optional parameters
             direction: 'vertical',

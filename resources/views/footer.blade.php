@@ -2,42 +2,40 @@
     <a id="_scrl_top" href="javascript:void(0);"><i class="fa fa-angle-up"></i></a>
     <div class="container">
         <div class="row">
-            <div class="com-md-4 col-sm-4 col-xs-12">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <a class="footer-brand-link" href="/">{{ config('app.name', 'CookMe') }}</a>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
                 <div class="footer-links">
                     <ul class="links-set-1">
-                        <li><a href="#" class="f-link">Link1</a></li>
-                        <li><a href="#" class="f-link">Link2</a></li>
-                        <li><a href="#" class="f-link">Link3</a></li>
-                        <li><a href="#" class="f-link">Link4</a></li>
-                        <li><a href="#" class="f-link">Link5</a></li>
-                        <li><a href="#" class="f-link">Link6</a></li>
+                        <li><a href="#" class="f-link">@lang('everywhere.simple_products_delicious_diches')</a></li>
+                        <li><a href="#" class="f-link">@lang('everywhere.meat_cuisine')</a></li>
+                        <li><a href="#" class="f-link">@lang('everywhere.healthy_breakfast_recipes')</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="com-md-4 col-sm-4 col-xs-12">
+            <div class="col-md-4 col-sm-4 col-xs-12">
                 <div class="footer-links">
                     <ul class="links-set-2">
-                        <li><a href="#" class="f-link">Link1</a></li>
-                        <li><a href="#" class="f-link">Link2</a></li>
-                        <li><a href="#" class="f-link">Link3</a></li>
-                        <li><a href="#" class="f-link">Link4</a></li>
-                        <li><a href="#" class="f-link">Link5</a></li>
-                        <li><a href="#" class="f-link">Link6</a></li>
+                        <li><a href="#" class="f-link">@lang('everywhere.ask_chef')</a></li>
+                        <li><a href="#" class="f-link">@lang('everywhere.hire_chef')</a></li>
+
                     </ul>
                 </div>
             </div>
-            <div class="com-md-4 col-sm-4 col-xs-12">
+            <div class="col-md-4 col-sm-4 col-xs-12">
                 <div class="footer-links">
                     <ul class="links-set-3">
-                        <li><a href="#" class="f-link">Link1</a></li>
-                        <li><a href="#" class="f-link">Link2</a></li>
-                        <li><a href="#" class="f-link">Link3</a></li>
-                        <li><a href="#" class="f-link">Link4</a></li>
-                        <li><a href="#" class="f-link">Link5</a></li>
-                        <li><a href="#" class="f-link">Link6</a></li>
+                        <li><a href="{{ route('register') }}" class="f-link">@lang('everywhere.register')</a></li>
+                        <li><a href="{{ route('login') }}" class="f-link">@lang('everywhere.login')</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 </footer>
+<div class="container copyrights">
+    <div class="row">
+        <div class="col-md-12">@lang('everywhere.copyrights')</div>
+    </div>
+</div>

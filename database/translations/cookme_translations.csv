@@ -1,7 +1,7 @@
 ID,namespace,group,item,English,Ukrainian UA,Russian RU
-0,*,everywhere,login,Login,Увійти,Войти
+0,*,everywhere,login,Log in,Увійти,Войти
 0,*,everywhere,register,Join,Реєстрація,Зарегистрироваться
-0,*,everywhere,logout,Logout,Вийти,Выйти
+0,*,everywhere,logout,Log out,Вийти,Выйти
 0,*,everywhere,languages,Languages,Мови,Языки
 0,*,everywhere,user,User,Користувач,Пользователь
 0,*,everywhere,have_cooking_questions,Have cooking questions?,Є кулінарні питання?,Есть кулинарные вопросы?
@@ -16,3 +16,9 @@ ID,namespace,group,item,English,Ukrainian UA,Russian RU
 0,*,everywhere,hello,hello,здоровенькі були,привет
 0,*,everywhere,profile,Profile,Профіль,Профиль
 0,*,everywhere,facebook_login,Facebook Login,Вхід з Facebook,Вход с Facebook
+0,*,everywhere,sync,Sync,Синхронізація,Синхронизация
+0,*,everywhere,hire_chef,Hire Chef,Найняти Шефа,Нанять Шефа
+0,*,everywhere,copyrights,CookMe.com 2018,CookMe.com 2018,CookMe.com 2018
+0,*,everywhere,what_we_do,What We Do?,Що Ми Робимо?,Что Мы Делаем?
+0,*,everywhere,want_to_unite,We want to unite people excited about cooking. Those who have great experience and real chefs and those who've just started their way,Ми хочемо об'єднати людей які люблять готувати. Тих хто вже має великий досвід та реальних шефів з тими хто тільки починає свій шлях.,"Мы хотим объединить людей, которые любят готовить. Тех, кто уже имеет большой опыт и реальных шефов с теми, кто только начинает свой путь."
+0,*,everywhere,here_you_can,"Here you can talk to real chefs, improve your skills, post your dishes and get comments from society, and much more!","Тут ви можете поговорити зі справжніми шеф-кухарями, поліпшити свої навички, розмістити свої страви і отримати коментарі від суспільства і багато іншого!","Здесь вы можете поговорить с настоящими шеф-поварами, улучшить свои навыки, разместить свои блюда и получить комментарии от общества и многое другое!"

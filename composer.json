@@ -10,6 +10,7 @@
         "doctrine/dbal": "^2.5",
         "laravel/framework": "5.6.*",
         "laravel/tinker": "~1.0",
+        "pusher/pusher-php-server": "~3.0",
         "waavi/translation": "2.3.4"
     },
     "require-dev": {
