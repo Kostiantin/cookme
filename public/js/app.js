@@ -991,7 +991,30 @@ window.Vue = __webpack_require__(35);
 Vue.component('example', __webpack_require__(38));
 
 var app = new Vue({
-  el: '#app'
+    el: '#app'
+});
+
+Vue.component('message', {
+    template: '<li class="list-group-item"><slot></slot></li>'
+});
+
+var appChat = new Vue({
+    el: '#chat',
+    data: {
+        'message': '',
+        'chat': {
+            'messages': []
+        }
+    },
+    methods: {
+        sendMessage: function sendMessage() {
+            if (this.message.length != 0) {
+                console.log(this.message);
+                this.chat.messages.unshift(this.message);
+                this.message = '';
+            }
+        }
+    }
 });
 
 /***/ }),

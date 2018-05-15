@@ -350,6 +350,7 @@ footer {
   line-height: 40px;
   font-weight: bold;
   color: #fe6d0d;
+  border-top: 2px solid #73c900;
 }
 
 #_scrl_top {

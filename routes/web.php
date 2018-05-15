@@ -16,5 +16,12 @@ Route::group(['prefix' => $localizer->localeFromRequest()], function(){
     /* Your routes here */
     Route::get('/', 'IndexController@index');
     Auth::routes();
+
+    // chat route
+    Route::get('/chat', function() {
+        return view('chat');
+    });
 });
+
+
 

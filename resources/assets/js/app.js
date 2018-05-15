@@ -20,3 +20,27 @@ Vue.component('example', require('./components/Example.vue'));
 const app = new Vue({
     el: '#app'
 });
+
+
+Vue.component('message', {
+    template: '<li class="list-group-item"><slot></slot></li>'
+});
+
+const appChat = new Vue({
+    el: '#chat',
+    data: {
+        'message': '',
+        'chat': {
+            'messages':[]
+        }
+    },
+    methods: {
+        sendMessage() {
+            if (this.message.length != 0) {
+                this.chat.messages.unshift(this.message);
+                this.message = '';
+            }
+        }
+    }
+});
+
