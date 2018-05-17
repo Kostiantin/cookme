@@ -18,9 +18,9 @@ Route::group(['prefix' => $localizer->localeFromRequest()], function(){
     Auth::routes();
 
     // chat route
-    Route::get('/chat', function() {
-        return view('chat');
-    });
+    Route::get('/chat', 'ChatController@chat');
+    Route::get('/send', 'ChatController@send');
+    Route::get('/meat', 'RecipesController@meat');
 });
 
 
