@@ -45,7 +45,7 @@
                         <p class="c-text">
                             @lang('everywhere.meat_cuisine')
                         </p>
-                        <a class="slider-link" href="#">
+                        <a class="slider-link" href="/meat">
                             @lang('everywhere.cook_me')
                         </a>
                     </div>
@@ -120,14 +120,6 @@
                 el: '.swiper-pagination',
                 clickable: true
             }
-        });
-    </script>
-    <script>
-        jQuery(document).ready(function($) {
-            $('#_scrl_top').click(function(){
-                $("html, body").animate({ scrollTop: 0 }, 1600);
-                return false;
-            });
         });
     </script>
 @endsection
