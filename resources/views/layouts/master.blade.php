@@ -37,11 +37,10 @@
 
 @endif
 
-@include('footer')
 
 <!-- Scripts -->
-
 @include('layouts.scripts')
+@include('footer')
 
 @yield('custom_js')
 </body>

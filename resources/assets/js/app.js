@@ -17,17 +17,12 @@ window.Vue = require('vue');
 
 Vue.component('example', require('./components/Example.vue'));
 
-const app = new Vue({
-    el: '#app'
-});
-
-
 Vue.component('message', {
-    template: '<li class="list-group-item"><slot></slot></li>'
+    template: '<li class="list-group-item list-group-item-success"><div><slot></slot></div><small class="float-right">you</small></li>'
 });
 
-const appChat = new Vue({
-    el: '#chat',
+const app = new Vue({
+    el: '#app',
     data: {
         'message': '',
         'chat': {
@@ -36,11 +31,22 @@ const appChat = new Vue({
     },
     methods: {
         sendMessage() {
-            if (this.message.length != 0) {
-                this.chat.messages.unshift(this.message);
-                this.message = '';
-            }
+        if (this.message.length != 0) {
+            this.chat.messages.unshift(this.message);
+            this.message = '';
         }
+      }
+    },
+    mounted() {
+        Echo.private('chat')
+            .listen('ChatEvent', (e) => {
+            console.log(e);
+        });
     }
 });
+
+
+
+
+
 
