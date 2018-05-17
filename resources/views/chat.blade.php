@@ -23,20 +23,30 @@
             }
             #chat-ul li {
                 list-style-type: none;
+                position: relative;
+                margin-bottom: 15px;
+            }
+            #chat-ul li small {
+                position: absolute;
+                right: 0px;
+                bottom: -13px;
+                color: #3c763d;
+                font-weight: bold;
+                background-color: #ddd;
+                line-height: 12px;
             }
         </style>
     </head>
     <body>
-        <div id="app"></div>
         <div class="content">
             <div class="row" >
-                <div class="col-md-12" id="chat">
+                <div class="col-md-12" id="app">
                     <ul id="chat-ul" class="list-group">
                         <li>Chat</li>
                         <li>
                             <input type="text" class="form-control" value="" placeholder="Type your message here..." v-model="message" v-on:keyup.enter="sendMessage">
                         </li>
-                        <message v-for="msg in chat.messages">@{{msg}}</message>
+                        <message v-for="msg in chat.messages" v-bind:key="msg.index">@{{msg}}</message>
                     </ul>
                 </div>
 
