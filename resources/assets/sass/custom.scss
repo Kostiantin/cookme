@@ -254,6 +254,32 @@ a.slider-link:hover, a.slider-link:focus {
   margin-bottom: 0px;
 }
 /*index page content end*/
+/*recipes*/
+.our-recipes {
+  background-color: #fe6d0d;
+  color: #fff;
+  padding: 90px 0px 90px 0px;
+}
+.our-recipes ul {
+  text-align: left;
+  margin: 0px;
+  padding: 0px;
+}
+.our-recipes ul li {
+
+}
+.our-recipes hr {
+  margin-top: 40px;
+}
+.main-image-container {
+  text-align: center;
+  background-color: #eee;
+}
+.main-image-container img {
+  width: 100%;
+  max-width: 500px;
+}
+/*recipes end*/
 /*footer*/
 footer {
   padding: 50px 0px 80px 0px;
