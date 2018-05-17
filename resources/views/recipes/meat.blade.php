@@ -9,7 +9,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 ">
-                <h1>Three cool meat recipes.</h1>
+                <h1>@lang('everywhere.meat_cuisine')</h1>
                 <h2>Bacon & roast onion salad</h2>
                 <p>A rustic salad for one - contrast peas and caramelised onion with salty, streaky bacon and mustard dressing</p>
             </div>

@@ -7,8 +7,14 @@ use Illuminate\Http\Request;
 class RecipesController extends Controller
 {
 
-    public function meat()
+    public function recipes($theme)
     {
-        return view('recipes.meat');
+        if(view()->exists('recipes.'.$theme)){
+            return view('recipes.'.$theme);
+        }
+        else {
+            return redirect()->action('IndexController@index');
+        }
     }
+
 }

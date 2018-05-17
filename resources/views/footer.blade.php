@@ -8,9 +8,9 @@
             <div class="col-md-4 col-sm-4 col-xs-12">
                 <div class="footer-links">
                     <ul class="links-set-1">
-                        <li><a href="#" class="f-link"><i class="fa fa-bullseye" aria-hidden="true"></i> @lang('everywhere.simple_products_delicious_diches')</a></li>
-                        <li><a href="#" class="f-link"><i class="fa fa-bullseye" aria-hidden="true"></i> @lang('everywhere.meat_cuisine')</a></li>
-                        <li><a href="#" class="f-link"><i class="fa fa-bullseye" aria-hidden="true"></i> @lang('everywhere.healthy_breakfast_recipes')</a></li>
+                        <li><a href="/recipes/simple" class="f-link"><i class="fa fa-bullseye" aria-hidden="true"></i> @lang('everywhere.simple_products_delicious_diches')</a></li>
+                        <li><a href="/recipes/meat" class="f-link"><i class="fa fa-bullseye" aria-hidden="true"></i> @lang('everywhere.meat_cuisine')</a></li>
+                        <li><a href="/recipes/breakfast" class="f-link"><i class="fa fa-bullseye" aria-hidden="true"></i> @lang('everywhere.healthy_breakfast_recipes')</a></li>
                     </ul>
                 </div>
             </div>

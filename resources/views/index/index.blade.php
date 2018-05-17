@@ -31,7 +31,7 @@
                         <p class="c-text">
                             @lang('everywhere.simple_products_delicious_diches')
                         </p>
-                        <a class="slider-link" href="#">
+                        <a class="slider-link" href="/recipes/simple">
                             @lang('everywhere.check_recipes')
                         </a>
                     </div>
@@ -45,7 +45,7 @@
                         <p class="c-text">
                             @lang('everywhere.meat_cuisine')
                         </p>
-                        <a class="slider-link" href="/meat">
+                        <a class="slider-link" href="/recipes/meat">
                             @lang('everywhere.cook_me')
                         </a>
                     </div>
@@ -59,7 +59,7 @@
                         <p class="c-text">
                             @lang('everywhere.healthy_breakfast_recipes')
                         </p>
-                        <a class="slider-link" href="#">
+                        <a class="slider-link" href="/recipes/breakfast">
                             @lang('everywhere.try_it')
                         </a>
                     </div>
