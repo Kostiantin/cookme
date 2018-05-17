@@ -41,3 +41,11 @@
         </div>
     </div>
 </div>
+<script>
+    ( function($) {
+        $('#_scrl_top').click(function(){
+            $("html, body").animate({ scrollTop: 0 }, 1600);
+            return false;
+        });
+    }) (jQuery);
+</script>
