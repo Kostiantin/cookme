@@ -344,6 +344,7 @@ a.slider-link:focus {
 .main-image-container {
   text-align: center;
   background-color: #eee;
+  border: 1px solid #555;
 }
 
 .main-image-container img {

@@ -24,7 +24,7 @@
         </div>
         <div class="row">
             <div class="col-xs-12 col-sm-4 col-md-4 chef-ingredients">
-                <h3>Chef Ingredients</h3>
+                <h3>@lang('everywhere.chef_ingredients')</h3>
                 <ul>
                     <li>400g spaghetti</li>
                     <li>3 garlic cloves, very thinly sliced</li>
@@ -40,7 +40,7 @@
                 </ul>
             </div>
             <div class="col-xs-12 col-sm-8 col-md-8">
-                <h3>How to CookMe</h3>
+                <h3>@lang('everywhere.how_to_cookme')</h3>
                 <ul>
                     <li>Boil the kettle. Put all the ingredients except the pecorino and basil in a wide saucepan or deep frying pan and season well. Pour over 800ml kettle-hot water and bring to a simmer, using your tongs to ease the spaghetti under the liquid as it starts to soften.</li>
 
@@ -67,7 +67,7 @@
         </div>
         <div class="row">
             <div class="col-xs-12 col-sm-4 col-md-4 chef-ingredients">
-                <h3>Chef Ingredients</h3>
+                <h3>@lang('everywhere.chef_ingredients')</h3>
                 <ul>
                     <li>200g strong white bread flour, plus a little for dusting</li>
                     <li>½ tsp fast-action dried yeast</li>
@@ -84,7 +84,7 @@
                 </ul>
             </div>
             <div class="col-xs-12 col-sm-8 col-md-8">
-                <h3>How to CookMe</h3>
+                <h3>@lang('everywhere.how_to_cookme')</h3>
                 <ul>
                     <li>Weigh the ingredients for the dough into a large bowl and add 1/2 tsp salt and 125ml warm water. Mix to form a soft dough, then tip onto your work surface and knead for 5 mins or until the dough feels stretchy. Clean and grease the bowl and return the dough. Cover with cling film and leave somewhere warm to rise for 1 hr, or until the dough has doubled in size.</li>
                     <li>Meanwhile, make the sauce. Heat 1 tbsp olive oil in a pan and add the garlic. Sizzle gently for 30 secs, making sure the garlic doesn’t brown, then add the passata. Season well and bubble for 8-10 mins until you have a rich sauce – add a pinch of sugar if it tastes a little too tart. Set aside.</li>
@@ -111,7 +111,7 @@
         </div>
         <div class="row">
             <div class="col-xs-12 col-sm-4 col-md-4 chef-ingredients">
-                <h3>Chef Ingredients</h3>
+                <h3>@lang('everywhere.chef_ingredients')</h3>
                 <ul>
                     <li>1 large unwaxed lemon, cut into thin rounds, then halved</li>
                     <li>2 ½ tbsp olive oil</li>
@@ -128,7 +128,7 @@
                 </ul>
             </div>
             <div class="col-xs-12 col-sm-8 col-md-8">
-                <h3>How to CookMe</h3>
+                <h3>@lang('everywhere.how_to_cookme')</h3>
                 <ul>
                     <li>Heat oven to 200C/180C fan/ gas 6. Put the lemon slices on a baking sheet lined with baking parchment. Drizzle over 1 /2 tbsp oil and put in the oven on the highest shelf to roast for 15-20 mins, until the lemon has released its natural sugars and the peel has softened and begun to caramelise. Keep an eye on them – you may need to turn the tray so that they cook evenly.</li>
 
