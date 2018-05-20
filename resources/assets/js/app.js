@@ -33,14 +33,31 @@ const app = new Vue({
         sendMessage() {
         if (this.message.length != 0) {
             this.chat.messages.unshift(this.message);
-            this.message = '';
+            //
+
+            axios.post('/send', {
+                message: this.message
+            })
+            .then(response => {
+                console.log(response);
+                //alert('scot');
+                this.message = '';
+            })
+            .catch(error => {
+                console.log(error);
+            });
         }
       }
     },
     mounted() {
-        Echo.private('chat')
-            .listen('ChatEvent', (e) => {
+        console.log(window.Echo);
+        window.Echo.channel('chat')
+            .listen('.ChatEvent', (e) => {
+            //alert(33);
             console.log(e);
+            //alert(e.message);
+            this.chat.messages.unshift(e.message);
+
         });
     }
 });
