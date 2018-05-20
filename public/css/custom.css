@@ -337,6 +337,10 @@ a.slider-link:focus {
   padding: 0px;
 }
 
+.our-recipes ul li {
+  list-style-type: none;
+}
+
 .our-recipes hr {
   margin-top: 40px;
 }

@@ -19,7 +19,7 @@ Route::group(['prefix' => $localizer->localeFromRequest()], function(){
 
     // chat route
     Route::get('/chat', 'ChatController@chat');
-    Route::get('/send', 'ChatController@send');
+    Route::post('/send', 'ChatController@send');
     Route::get('/recipes/{theme}', 'RecipesController@recipes');
 
 });

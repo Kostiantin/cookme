@@ -1004,15 +1004,33 @@ var app = new Vue({
     },
     methods: {
         sendMessage: function sendMessage() {
+            var _this = this;
+
             if (this.message.length != 0) {
                 this.chat.messages.unshift(this.message);
-                this.message = '';
+                //
+
+                axios.post('/send', {
+                    message: this.message
+                }).then(function (response) {
+                    console.log(response);
+                    //alert('scot');
+                    _this.message = '';
+                }).catch(function (error) {
+                    console.log(error);
+                });
             }
         }
     },
     mounted: function mounted() {
-        Echo.private('chat').listen('ChatEvent', function (e) {
+        var _this2 = this;
+
+        console.log(window.Echo);
+        window.Echo.channel('chat').listen('.ChatEvent', function (e) {
+            //alert(33);
             console.log(e);
+            //alert(e.message);
+            _this2.chat.messages.unshift(e.message);
         });
     }
 });
@@ -1076,9 +1094,10 @@ window.Pusher = __webpack_require__(36);
 
 window.Echo = new __WEBPACK_IMPORTED_MODULE_0_laravel_echo___default.a({
   broadcaster: 'pusher',
-  key: '722bb660e49d24e55894',
+  key: '8cb439a0243007653cf2',
   cluster: 'eu',
   encrypted: true
+
 });
 
 /***/ }),
