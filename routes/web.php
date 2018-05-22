@@ -18,9 +18,15 @@ Route::group(['prefix' => $localizer->localeFromRequest()], function(){
     Auth::routes();
 
     // chat route
-    Route::get('/chat', 'ChatController@chat');
-    Route::post('/send', 'ChatController@send');
+    //Route::get('/chat', 'ChatController@chat');
+    //Route::post('/send', 'ChatController@send');
     Route::get('/recipes/{theme}', 'RecipesController@recipes');
+
+    Route::get('/chat-messages', 'ChatController@getMessages')
+        ->middleware('auth');
+    Route::post('/chat-messages', 'ChatController@postMessage')
+        ->middleware('auth');
+    Route::get('/chat', 'ChatController@index')->middleware('auth');
 
 });
 
