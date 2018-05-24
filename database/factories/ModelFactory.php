@@ -23,7 +23,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(App\Message::class, function (Faker\Generator$faker) {
+/*$factory->define(App\Message::class, function (Faker\Generator$faker) {
 
     $message = $faker->unique()->word . ' ' . $faker->unique()->word;
 
@@ -32,4 +32,4 @@ $factory->define(App\Message::class, function (Faker\Generator$faker) {
         'user_id' => 4
     ];
 
-});
+});*/

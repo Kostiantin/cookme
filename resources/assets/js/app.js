@@ -17,18 +17,26 @@ window.Vue = require('vue');
 
 
 Vue.component('example', require('./components/Example.vue'));
-Vue.component('widget-grid', require('./components/WidgetGrid.vue'));
-Vue.component('marketing-image-grid', require('./components/MarketingImageGrid.vue'));
 Vue.component('chat-message', require('./components/ChatMessage.vue'));
-Vue.component('chat-list', require('./components/ChatList.vue'));
-Vue.component('chat-create', require('./components/ChatCreate.vue'));
+Vue.component('chat-log', require('./components/ChatLog.vue'));
+Vue.component('chat-composer', require('./components/ChatComposer.vue'));
 
 Vue.component('message', {
     template: '<li class="list-group-item list-group-item-success"><div><slot></slot></div><small class="float-right">you</small></li>'
 });
 
-
 const app = new Vue({
+
+    el: '#app',
+
+    data: {
+
+        messages: [],
+        currentuser: '',
+        roomCount: []
+    }
+});
+/*const app = new Vue({
 
     el: '#app',
 
@@ -70,7 +78,7 @@ const app = new Vue({
         });
 
     }
-});
+});*/
 
 
 

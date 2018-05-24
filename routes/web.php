@@ -22,11 +22,15 @@ Route::group(['prefix' => $localizer->localeFromRequest()], function(){
     //Route::post('/send', 'ChatController@send');
     Route::get('/recipes/{theme}', 'RecipesController@recipes');
 
-    Route::get('/chat-messages', 'ChatController@getMessages')
+    /*Route::get('/chat-messages', 'ChatController@getMessages')
         ->middleware('auth');
     Route::post('/chat-messages', 'ChatController@postMessage')
         ->middleware('auth');
-    Route::get('/chat', 'ChatController@index')->middleware('auth');
+    Route::get('/chat', 'ChatController@index')->middleware('auth');*/
+
+    Route::get('/chat', function () {
+       return view('chat');
+    });
 
 });
 
