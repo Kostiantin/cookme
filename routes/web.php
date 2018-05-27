@@ -1,5 +1,8 @@
 <?php
 use Illuminate\Support\Facades\Config;
+use App\Message;
+use App\Events\MessagePosted;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,8 +33,26 @@ Route::group(['prefix' => $localizer->localeFromRequest()], function(){
 
     Route::get('/chat', function () {
        return view('chat');
-    });
+    })->middleware('auth');
 
+    Route::get('messages', function() {
+        $data = [];
+        $data['messages'] = App\Message::with('user')->orderBy('id', 'desc')->get();
+        $data['current_user'] = Auth::user();
+        return $data;
+    })->middleware('auth');
+
+    // send and save user message
+    Route::post('savemessage', function() {
+
+        $user = Auth::user();
+        $message = $user->messages()->create(['message' => request()->get('message')]);
+
+        // broadcast even posted
+        event(new MessagePosted($message,$user));
+
+        return ['status' => 'OK'];
+    });
 });
 
 

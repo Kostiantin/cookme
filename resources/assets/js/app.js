@@ -26,14 +26,56 @@ Vue.component('message', {
 });
 
 const app = new Vue({
-
     el: '#app',
 
+    methods: {
+        addMessage(message) {
+            this.messages.unshift(message);
+
+            //save into db
+            axios.post('/savemessage', message).then(response => {
+                //console.log(response);
+            });
+        }
+    },
     data: {
 
         messages: [],
-        currentuser: '',
-        roomCount: []
+        current_user: '',
+        usersInRoom: []
+    },
+    created() {
+        if ($('#chat-room-container').length > 0) {
+            axios.get('/messages').then(response => {
+                //console.log(response);
+                this.messages = response.data.messages;
+                this.current_user = response.data.current_user.name;
+            });
+            Echo.join('chatroom')
+                .here((users) => {
+                    this.usersInRoom = users;
+                })
+                .joining((user) => {
+                    this.usersInRoom = this.usersInRoom.push(user);
+                })
+                .leaving((user) => {
+                    this.usersInRoom = this.usersInRoom.filter(u => u != user);
+                    console.log('leaving');
+                    console.log(user);
+                })
+                .listen('MessagePosted', (e) => {
+                       /* console.log(e.message.message);
+                        console.log(e.user.name);
+                        console.log(this.messages);*/
+                    this.messages.unshift({
+                        message: e.message.message,
+                        user: {
+                            name: e.user.name
+                        }
+                    });
+                });
+        }
+
     }
 });
 /*const app = new Vue({

@@ -17,12 +17,15 @@
         </style>
     </head>
     <body>
-        <div class="content">
+        <div class="container" id="chat-room-container">
             <div class="row" >
                 <div class="col-md-12" id="app">
-                    <h1>Chat Room</h1>
-                    <chat-log></chat-log>
-                    <chat-composer></chat-composer>
+                    <h1>
+                        Chat Room
+                        <span class="badge pull-right">@{{usersInRoom.length}}</span>
+                    </h1>
+                    <chat-log v-bind:messages="messages" v-bind:current_user="current_user"></chat-log>
+                    <chat-composer @messagesent="addMessage" v-bind:current_user="current_user"></chat-composer>
                 </div>
 
             </div>

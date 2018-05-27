@@ -1,16 +1,32 @@
 <template lang="html">
     <div class="chat-composer">
 
-        <input class="form-control" type="text" placeholder="Type your message here..."/>
-        <button class="btn btn-primary">Send</button>
+        <input class="form-control" type="text" placeholder="Type your message here..." v-model="messageText" @keyup.enter="sendMessage"/>
+        <button class="btn btn-primary" @click="sendMessage">Send</button>
     </div>
 </template>
 
 
-<script>
+<script type="text/babel">
 
     export default {
-
+        props: ['current_user'],
+        data() {
+            return {
+                messageText: ''
+            }
+        },
+        methods: {
+            sendMessage() {
+                this.$emit('messagesent',{
+                    message: this.messageText,
+                    user: {
+                        name: this.current_user
+                    }
+                });
+                this.messageText = '';
+            }
+        }
     }
 
 </script>
