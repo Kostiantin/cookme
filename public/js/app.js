@@ -1440,13 +1440,11 @@ var app = new Vue({
             Echo.join('chatroom').here(function (users) {
                 _this.usersInRoom = users;
             }).joining(function (user) {
-                _this.usersInRoom = _this.usersInRoom.push(user);
+                _this.usersInRoom.push(user);
             }).leaving(function (user) {
-                _this.usersInRoom = _this.usersInRoom.filter(function (u) {
-                    return u != user;
-                });
-                console.log('leaving');
-                console.log(user);
+                _this.usersInRoom.splice(_this.usersInRoom.indexOf(user), 1);
+                //console.log('leaving');
+                //console.log(user);
             }).listen('MessagePosted', function (e) {
                 /* console.log(e.message.message);
                  console.log(e.user.name);
@@ -1461,90 +1459,6 @@ var app = new Vue({
         }
     }
 });
-/*const app = new Vue({
-
-    el: '#app',
-
-    data: {
-
-        messages: [],
-        currentuser: '',
-        roomCount: []
-    },
-
-    methods: {
-        addMessage(message) {
-
-            // add to existing messages
-            this.messages.push(message);
-
-            axios.post('/chat-messages', message)
-                .then(response => {
-
-                }).catch(error => {
-                    console.log(error);
-                });
-        }
-
-    },
-
-    created(){
-
-        axios.get('/chat-messages').then(response=> {
-
-            this.messages = response.data;
-
-        });
-
-        axios.get('/username').then(response=> {
-
-            this.currentuser = response.data;
-
-        });
-
-    }
-});*/
-
-/*const app = new Vue({
-    el: '#app',
-    data: {
-        'message': '',
-        'chat': {
-            'messages':[]
-        }
-    },
-    methods: {
-        sendMessage() {
-        if (this.message.length != 0) {
-            this.chat.messages.unshift(this.message);
-            //
-
-            axios.post('/send', {
-                message: this.message
-            })
-            .then(response => {
-                console.log(response);
-                //alert('scot');
-                this.message = '';
-            })
-            .catch(error => {
-                console.log(error);
-            });
-        }
-      }
-    },
-    mounted() {
-        console.log(window.Echo);
-        window.Echo.channel('chat')
-            .listen('.ChatEvent', (e) => {
-            //alert(33);
-            console.log(e);
-            //alert(e.message);
-            this.chat.messages.unshift(e.message);
-
-        });
-    }
-});*/
 
 /***/ }),
 /* 14 */

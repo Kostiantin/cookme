@@ -52,16 +52,16 @@ const app = new Vue({
                 this.current_user = response.data.current_user.name;
             });
             Echo.join('chatroom')
-                .here((users) => {
+                .here(users => {
                     this.usersInRoom = users;
                 })
-                .joining((user) => {
-                    this.usersInRoom = this.usersInRoom.push(user);
+                .joining(user => {
+                    this.usersInRoom.push(user);
                 })
-                .leaving((user) => {
-                    this.usersInRoom = this.usersInRoom.filter(u => u != user);
-                    console.log('leaving');
-                    console.log(user);
+                .leaving(user => {
+                    this.usersInRoom.splice(this.usersInRoom.indexOf(user),1);
+                    //console.log('leaving');
+                    //console.log(user);
                 })
                 .listen('MessagePosted', (e) => {
                        /* console.log(e.message.message);
@@ -78,92 +78,6 @@ const app = new Vue({
 
     }
 });
-/*const app = new Vue({
-
-    el: '#app',
-
-    data: {
-
-        messages: [],
-        currentuser: '',
-        roomCount: []
-    },
-
-    methods: {
-        addMessage(message) {
-
-            // add to existing messages
-            this.messages.push(message);
-
-            axios.post('/chat-messages', message)
-                .then(response => {
-
-                }).catch(error => {
-                    console.log(error);
-                });
-        }
-
-    },
-
-    created(){
-
-        axios.get('/chat-messages').then(response=> {
-
-            this.messages = response.data;
-
-        });
-
-        axios.get('/username').then(response=> {
-
-            this.currentuser = response.data;
-
-        });
-
-    }
-});*/
-
-
-
-/*const app = new Vue({
-    el: '#app',
-    data: {
-        'message': '',
-        'chat': {
-            'messages':[]
-        }
-    },
-    methods: {
-        sendMessage() {
-        if (this.message.length != 0) {
-            this.chat.messages.unshift(this.message);
-            //
-
-            axios.post('/send', {
-                message: this.message
-            })
-            .then(response => {
-                console.log(response);
-                //alert('scot');
-                this.message = '';
-            })
-            .catch(error => {
-                console.log(error);
-            });
-        }
-      }
-    },
-    mounted() {
-        console.log(window.Echo);
-        window.Echo.channel('chat')
-            .listen('.ChatEvent', (e) => {
-            //alert(33);
-            console.log(e);
-            //alert(e.message);
-            this.chat.messages.unshift(e.message);
-
-        });
-    }
-});*/
 
 
 

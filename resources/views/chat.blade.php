@@ -18,18 +18,25 @@
     </head>
     <body>
         <div class="container" id="chat-room-container">
-            <div class="row" >
-                <div class="col-md-12" id="app">
-                    <h1>
-                        Chat Room
-                        <span class="badge pull-right">@{{usersInRoom.length}}</span>
-                    </h1>
-                    <chat-log v-bind:messages="messages" v-bind:current_user="current_user"></chat-log>
-                    <chat-composer @messagesent="addMessage" v-bind:current_user="current_user"></chat-composer>
+            <div id="app">
+                <div class="row" >
+                    <div class="col-md-8">
+                        <h1>
+                            Chat Room
+                        </h1>
+                        <chat-log v-bind:messages="messages" v-bind:current_user="current_user"></chat-log>
+                        <chat-composer @messagesent="addMessage" v-bind:current_user="current_user"></chat-composer>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Active Participants</h4>
+                        <ul>
+                            <li v-for="user in usersInRoom" v-text="user.name"></li>
+                        </ul>
+                    </div>
                 </div>
-
             </div>
+
         </div>
-        <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ mix('js/app.js') }}"></script>
     </body>
 </html>
