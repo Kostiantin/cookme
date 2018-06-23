@@ -1,45 +1,39 @@
 @extends('layouts.master')
 
 @section('title')
-    <title>{{ config('app.name', 'CookMe') }}</title>
+<title>{{ config('app.name', 'CookMe') }}</title>
 @endsection
 
 @section('content')
-        <!-- Slider main container -->
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            Chatroom
+<div id="chat-room-container">
+    <div class="container">
+        <div id="app">
+            <div class="row" >
+                <div class="col-md-8">
+                    <div class="chat-main-container">
+                        <h2>
+                            Chat Room
+                        </h2>
+                        <chat-log v-bind:messages="messages" v-bind:current_user="current_user"></chat-log>
+                        <chat-composer @messagesent="addMessage" v-bind:current_user="current_user"></chat-composer>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="participants-main-container">
+                        <h2>Active Participants</h2>
+                        <ul>
+                            <li v-for="user in usersInRoom" v-text="user.name"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <chat-list v-bind:messages="messages"></chat-list>
-
-        <chat-create v-on:messagecreated="addMessage" :currentuser="currentuser"></chat-create>
-
     </div>
+</div>
+
+
 @endsection
 
 @section('custom_js')
-    <script src="{{ asset('js/swiper.min.js') }}"></script>
-
-    <script>
-        var mySwiper = new Swiper ('.swiper-container', {
-            lazy: true,
-            preloadImages: true,
-            loadPrevNextAmount: 2,
-            loadPrevNext: true,
-            speed: 1100,
-            autoplay: {
-                delay: 10000
-            },
-            // Optional parameters
-            direction: 'vertical',
-            loop: true,
-
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true
-            }
-        });
-    </script>
 @endsection

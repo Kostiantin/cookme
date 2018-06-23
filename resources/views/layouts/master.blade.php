@@ -25,7 +25,9 @@
 @if(Session::has('message'))
     <div class="custom-alert">{{ Session::get('message') }}</div>
 @endif
+@if($controller != 'ChatController')
 <div id="app" style="display: none;"></div>
+@endif
 @include('header')
 @if($controller == 'IndexController' && $action == 'index')
     @yield('content')

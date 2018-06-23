@@ -7,7 +7,7 @@ use App\User;
 //use App\Events\ChatEvent;
 use Illuminate\Support\Facades\Auth;
 use App\Message;
-
+use App\Events\MessagePosted;
 
 class ChatController extends Controller
 {
@@ -21,39 +21,22 @@ class ChatController extends Controller
         return view('chat.index');
     }
 
-    public function getMessages(Request $request)
+    public function messages()
     {
-        if ( ! $request->ajax()) {
-            //throw new UnauthorizedException();
-        }
-        $messages = Message::with('user')->MostRecent()->get();
-        $messages = array_reverse($messages->toArray());
-        return $messages;
+        $data = [];
+        $data['messages'] = Message::with('user')->orderBy('id', 'desc')->get();
+        $data['current_user'] = Auth::user();
+        return $data;
     }
 
-    public function postMessage(Request $request)
+    public function savemessage()
     {
-        if ( ! $request->ajax()) {
-            //throw new UnauthorizedException();
-        }
         $user = Auth::user();
-        $message = $user->messages()->create([
-            'message' => request()->get('message')
-        ]);
-        //broadcast(new MessagePosted($message, $user))->toOthers();
+        $message = $user->messages()->create(['message' => request()->get('message')]);
+
+        // broadcast even posted
+        event(new MessagePosted($message,$user));
+
         return ['status' => 'OK'];
     }
-    /*public function chat()
-    {
-        return view('chat');
-    }
-
-    public function send(request $request)
-    {
-        //return $request->all();
-        $user = User::find(Auth::id());
-        event(new ChatEvent($request->message, $user));
-    }*/
-
-
 }

@@ -482,3 +482,32 @@ body.stop-scrolling {
   color: #d70d0d;
 }
 
+#chat-room-container {
+  padding: 90px 0px 90px 0px;
+  background-image: url("/img/chat_back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.chat-main-container {
+  margin-left: 20px;
+}
+
+.chat-main-container h2 {
+  color: #fff;
+}
+
+.participants-main-container h2 {
+  color: #fff;
+}
+
+.participants-main-container ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+.participants-main-container ul li {
+  text-decoration: underline;
+  color: #fff;
+}
+
