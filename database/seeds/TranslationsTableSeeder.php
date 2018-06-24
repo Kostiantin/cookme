@@ -13,6 +13,8 @@ class TranslationsTableSeeder extends Seeder
     public function run()
     {
 
+        DB::table('translator_translations')->truncate();
+
         $langsConfig = LanguagesTableSeeder::$aLangs;
         //echo database_path();die;
         $handle = fopen(database_path()."/translations/cookme_translations.csv", "r");

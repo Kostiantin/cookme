@@ -153,3 +153,4 @@ ID,namespace,group,item,English,Ukrainian UA,Russian RU
 0,*,everywhere,or_login,or Login,або Увійти,или Войти
 0,*,everywhere,reset_password,Reset Password,Зкинути Пароль,Сбросить Пароль
 0,*,everywhere,send_password_link,Send Password Reset Link,Відправити посилання на зкидання паролю,Отправить ссылку на сброс пароля
+0,*,everywhere,more_information,More Information,Більше Ірформації,Больше Информации
