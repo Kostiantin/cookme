@@ -3,7 +3,7 @@
 This is a simple cooking blog based on Laravel 5.6. Here i also implemented a simple chat page based on: Laravel Echo, Vue and Pusher, where user can ask for help one of responsible chefs.  
 After installing, the site should look like this:  
   Home page:  
-  ![home page](https://github.com/Kostiantin/cookme/blob/master/public/img/screenshots/home_page.png)  
+  ![home page](https://github.com/Kostiantin/cookme/blob/master/public/img/screenshots/home_page_en.png)  
   Recipes pages:  
     ![recipes page 1](https://www.dropbox.com/s/vxxlxkkawxy5rjv/screencapture-cookme-int-en-recipes-simple-2018-06-24-14_04_05.png?dl=0 "recipes page 1")  
     ![recipes page 2](https://www.dropbox.com/s/wdr9pg4ra0vvylb/screencapture-cookme-int-en-recipes-breakfast-2018-06-24-14_03_33.png?dl=0 "recipes page 2")  
