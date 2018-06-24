@@ -47,8 +47,10 @@ These instructions will get you a copy of the project up and running on your loc
      
 7) Later if you need to add or change translations you need to do 3 things:  
      a) work with file: /database/translations/cookme_translations.csv  
-     b) run seeder with command:  php artisan db:seed --class=UsersTableSeeder  
-     c) refresh translations cache with command: php artisan translator:flush  
+     b) run seeder with command:  
+          php artisan db:seed --class=UsersTableSeeder  
+     c) refresh translations cache with command:  
+          php artisan translator:flush  
        
 ## Authors
 
