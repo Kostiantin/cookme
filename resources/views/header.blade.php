@@ -24,7 +24,7 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
-                @if (count($altLocalizedUrls) > 0)
+                @if (count($altLocalizedUrls) > 0 && $controller != 'ChatController')
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle lng-flags" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="flag-container {{$currentLanguage->locale}}"></span><span class="lng-name">{{$currentLanguage->name}}</span>&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i>
@@ -60,14 +60,14 @@
                             </div>
                         </li>
                 @else
+                    <li><a href="{{route('chat')}}">@lang('everywhere.chat_room')</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
-
                         <ul class="dropdown-menu user-links" role="menu">
                             <li>
-                                <a href="/user/profile">
+                                <a href="#">
                                     <i class="fa fa-address-book"></i>&nbsp;@lang('everywhere.profile')
                                 </a>
                             </li>
@@ -77,13 +77,9 @@
                                                      document.getElementById('logout-form').submit();">
                                     <i class="fa fa-sign-out"></i>&nbsp;@lang('everywhere.logout')
                                 </a>
-
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     {{ csrf_field() }}
                                 </form>
-                                <!--<a class="user-links" href="/auth/facebook">
-                                    <i class="fa fa-facebook"></i>&nbsp;Logout
-                                </a>-->
                             </li>
                         </ul>
                     </li>

@@ -1,23 +1,24 @@
 <template lang="html">
     <div class="chat-message">
 
-        <p>{{ message.message }}</p>
+        <p :class="determineColors">{{ message.message }}</p>
 
-        <small>{{ message.user.name }}</small>
+        <small :class="determineColors"><strong>{{ message.created_at }}</strong>&nbsp;&nbsp;|&nbsp;&nbsp;{{ message.user.name }}</small>
 
     </div>
 </template>
 
 <script>
     export default {
-        props: ['message']
+        props: ['message', 'current_user'],
+        computed: {
+            determineColors(){
+                var _className = 'text-success';
+                if (this.message.user.name != this.current_user) {
+                    _className = 'text-info';
+                }
+                return _className;
+            }
+        }
     }
 </script>
-
-<style lang="css">
-
-    p {
-      color: red;
-    }
-
-</style>

@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-        <!-- Slider main container -->
+<!-- Slider main container -->
 <div class="swiper-container home-slider">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
@@ -17,7 +17,7 @@
                       <p class="c-text">
                           @lang('everywhere.have_cooking_questions')
                       </p>
-                      <a class="slider-link" href="#">
+                      <a class="slider-link" href="{{route('chat')}}">
                           @lang('everywhere.ask_chef')
                       </a>
                   </div>
@@ -31,7 +31,7 @@
                         <p class="c-text">
                             @lang('everywhere.simple_products_delicious_diches')
                         </p>
-                        <a class="slider-link" href="/recipes/simple">
+                        <a class="slider-link" href="{{route('recipes','simple')}}">
                             @lang('everywhere.check_recipes')
                         </a>
                     </div>
@@ -45,7 +45,7 @@
                         <p class="c-text">
                             @lang('everywhere.meat_cuisine')
                         </p>
-                        <a class="slider-link" href="/recipes/meat">
+                        <a class="slider-link" href="{{route('recipes','meat')}}">
                             @lang('everywhere.cook_me')
                         </a>
                     </div>
@@ -59,7 +59,7 @@
                         <p class="c-text">
                             @lang('everywhere.healthy_breakfast_recipes')
                         </p>
-                        <a class="slider-link" href="/recipes/breakfast">
+                        <a class="slider-link" href="{{route('recipes','breakfast')}}">
                             @lang('everywhere.try_it')
                         </a>
                     </div>
