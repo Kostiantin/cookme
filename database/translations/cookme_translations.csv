@@ -141,3 +141,15 @@ ID,namespace,group,item,English,Ukrainian UA,Russian RU
 0,*,everywhere,steak_panzanella_m_3,"About 5 mins before the lemons are ready, wrap the bavette in a foil parcel and put in the oven alongside the pitta bread to warm through.","Приблизно за 5 хвилин до того, як лимони будуть готові, оберніть баретки в пакет для фольги і поставте в духовку разом з хлібом пітта.","Примерно за 5 минут до того, как лимоны будут готовы, оберните баретку в пакет для фольги и поставьте в духовку вместе с хлебом питты."
 0,*,everywhere,steak_panzanella_m_4,Mix all the other salad ingredients together in a large bowl. Add a drizzle of extra virgin olive oil and season with black pepper and a little sea salt (the olives and feta will add salt so you shouldn’t need much).,"Змішайте всі інші інгредієнти салату разом у великій мисці. Додайте трохи оливкового масла з чорним перцем і подрібненою морською сіллю (оливки і фета додадуть сіль, тому вам не потрібно багато).","Смешайте все другие ингредиенты салата вместе в большой миске. Добавьте немного оливкового масла с черным перцем и измельченной морской солью (оливки и фета добавят соль, поэтому вам не нужно много)."
 0,*,everywhere,steak_panzanella_m_5,"Add the lemons, spiced pitta and warmed bavette. Mix everything together with your hands, then divide between plates or serve sharing-style on a large platter.","Додайте лимони, пряну питту і підігрітий баретт. Змішайте все разом руками, потім розділіть між тарілками або подавайте на великому блюді.","Добавьте лимоны, пряную питту и подогретый баретт. Смешайте все вместе руками, затем разделите между тарелками или подавайте на большом блюде."
+0,*,everywhere,chat_room,Chat Room,Чат,Чат
+0,*,everywhere,active_participants,Active Participants,Активні Участники,Активные Участники
+0,*,everywhere,email,E-Mail Address,Електронна Адреса,Электронный Адрес
+0,*,everywhere,password,Password,Пароль,Пароль
+0,*,everywhere,remember_me,Remember Me,Запам'ятати мене,Запомнить меня
+0,*,everywhere,forgot_password,Forgot Your Password?,Забули ваш пароль?,Забыли ваш пароль?
+0,*,everywhere,or_register,or Register,або Приєднатися,или Присоединиться
+0,*,everywhere,name,Name,Ім'я,Имя
+0,*,everywhere,confirm_password,Confirm Password,Підтвердити Пароль,Подтвердить Пароль
+0,*,everywhere,or_login,or Login,або Увійти,или Войти
+0,*,everywhere,reset_password,Reset Password,Зкинути Пароль,Сбросить Пароль
+0,*,everywhere,send_password_link,Send Password Reset Link,Відправити посилання на зкидання паролю,Отправить ссылку на сброс пароля
