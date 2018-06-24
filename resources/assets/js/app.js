@@ -9,6 +9,8 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+var moment = require('moment');
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -30,12 +32,12 @@ const app = new Vue({
 
     methods: {
         addMessage(message) {
-            this.messages.unshift(message);
-
             //save into db
             axios.post('/savemessage', message).then(response => {
                 //console.log(response);
             });
+            message.created_at = moment().format('YYYY-MM-DD HH:mm:ss');
+            this.messages.unshift(message);
         }
     },
     data: {
@@ -47,9 +49,9 @@ const app = new Vue({
     created() {
         if ($('#chat-room-container').length > 0) {
             axios.get('/messages').then(response => {
-                //console.log(response);
                 this.messages = response.data.messages;
                 this.current_user = response.data.current_user.name;
+
             });
             Echo.join('chatroom')
                 .here(users => {
@@ -60,15 +62,11 @@ const app = new Vue({
                 })
                 .leaving(user => {
                     this.usersInRoom.splice(this.usersInRoom.indexOf(user),1);
-                    //console.log('leaving');
-                    //console.log(user);
                 })
                 .listen('MessagePosted', (e) => {
-                       /* console.log(e.message.message);
-                        console.log(e.user.name);
-                        console.log(this.messages);*/
                     this.messages.unshift({
                         message: e.message.message,
+                        created_at: moment().format('YYYY-MM-DD HH:mm:ss'),
                         user: {
                             name: e.user.name
                         }
