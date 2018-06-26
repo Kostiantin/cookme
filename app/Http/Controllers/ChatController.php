@@ -24,7 +24,7 @@ class ChatController extends Controller
     public function messages()
     {
         $data = [];
-        $data['messages'] = Message::with('user')->orderBy('id', 'desc')->get();
+        $data['messages'] = Message::with('user')->orderBy('id', 'asc')->get();
         $data['current_user'] = Auth::user();
         return $data;
     }

@@ -37,7 +37,7 @@ const app = new Vue({
                 //console.log(response);
             });
             message.created_at = moment().format('YYYY-MM-DD HH:mm:ss');
-            this.messages.unshift(message);
+            this.messages.push(message);
         }
     },
     data: {
@@ -64,7 +64,7 @@ const app = new Vue({
                     this.usersInRoom.splice(this.usersInRoom.indexOf(user),1);
                 })
                 .listen('MessagePosted', (e) => {
-                    this.messages.unshift({
+                    this.messages.push({
                         message: e.message.message,
                         created_at: moment().format('YYYY-MM-DD HH:mm:ss'),
                         user: {
@@ -73,7 +73,6 @@ const app = new Vue({
                     });
                 });
         }
-
     }
 });
 
