@@ -1,5 +1,5 @@
 <?php
-
+use Faker\Generator as Faker;
 /*
 |--------------------------------------------------------------------------
 | Model Factories
@@ -12,7 +12,7 @@
 */
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+$factory->define(App\User::class, function (Faker $faker) {
     static $password;
 
     return [
@@ -33,3 +33,24 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     ];
 
 });*/
+$factory->define(App\Thread::class, function (Faker $faker) {
+    return [
+        'user_id' => function(){
+            return factory('App\User')->create()->id;
+        },
+        'title' => $faker->sentence(),
+        'body' => $faker->paragraph()
+    ];
+});
+
+$factory->define(App\Reply::class, function (Faker $faker) {
+    return [
+        'thread_id' => function(){
+            return factory('App\Thread')->create()->id;
+        },
+        'user_id' => function(){
+            return factory('App\User')->create()->id;
+        },
+        'body' => $faker->paragraph()
+    ];
+});

@@ -531,6 +531,10 @@ body.stop-scrolling {
   font-weight: bold;
 }
 
+.common-content-block {
+  padding: 90px 0px 90px 0px;
+}
+
 @media (max-width: 767px) {
   .chat-main-container {
     margin-left: 0px;
