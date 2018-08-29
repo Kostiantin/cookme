@@ -42,6 +42,15 @@
                         <div class="form-group">
                             <textarea name="body" id="body" class="form-control" placeholder="Have something to say?" rows="5"></textarea>
                         </div>
+                        @if (count($errors) > 0)
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach($errors->all() as $error)
+                                        <li>{{$error}}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         <div class="form-group">
                             <button class="btn btn-medium btn-info">@lang('everywhere.post')</button>
                         </div>
@@ -51,7 +60,7 @@
         @else
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    <p>@lang('everywhere.please')Please <a href="{{route('login')}}">@lang('everywhere.sign_in')</a> @lang('everywhere.to_participate_in_discussion').</p>
+                    <p>@lang('everywhere.please') <a href="{{route('login')}}">@lang('everywhere.sign_in')</a> @lang('everywhere.to_participate_in_discussion').</p>
                 </div>
             </div>
         @endif
