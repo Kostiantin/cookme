@@ -19,7 +19,10 @@ Route::group(['prefix' => $localizer->localeFromRequest()], function(){
     // send and save user message
     Route::post('savemessage', 'ChatController@savemessage')->name('chat_save_message')->middleware('auth');
 
-    Route::get('/threads', 'ThreadsController@index');
+    // threads
+    Route::get('/threads', 'ThreadsController@index')->name('all_threads');;
     Route::get('/threads/{thread}', 'ThreadsController@show');
+
+    Route::post('/threads/{thread}/replies', 'RepliesController@store')->name('add_reply_to_thread');
 
 });

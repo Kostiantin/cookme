@@ -84,6 +84,7 @@
                         </ul>
                     </li>
                 @endif
+                    <li><a href="{{ route('all_threads') }}">@lang('everywhere.all_threads')</a></li>
             </ul>
         </div>
     </div>
