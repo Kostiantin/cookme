@@ -155,9 +155,13 @@ ID,namespace,group,item,English,Ukrainian UA,Russian RU
 0,*,everywhere,send_password_link,Send Password Reset Link,Відправити посилання на зкидання паролю,Отправить ссылку на сброс пароля
 0,*,everywhere,more_information,More Information,Більше Ірформації,Больше Информации
 0,*,everywhere,give_your_comment,Give Your Comment,Дати Коментар,Комментировать
-0,*,everywhere,post,Post,Запостити,Запостить
+0,*,everywhere,post,Post,Опублікувати,Опубликовать
 0,*,everywhere,please,"Please,","Будь ласка,","Пожалуйста,"
 0,*,everywhere,sign_in,sign in,увійдіть,войдите
 0,*,everywhere,to_participate_in_discussion,to participate in the discussion,щоб мати змогу коментувати,чтобы иметь возможность комментировать
 0,*,everywhere,recent_comments,Recent Comments,Нещодавні Коментарі,Недавние Комментарии
 0,*,everywhere,all_threads,All Threads,Усі Теми,Все Темы
+0,*,everywhere,new_thread,Create A New Thread,Створити Нову Тему,Создать Новую Тему
+0,*,everywhere,title,Title,Заголовок,Название
+0,*,everywhere,body,Text,Текст,Текст
+0,*,everywhere,publish,Publish,Опублікувати,Опубликовать

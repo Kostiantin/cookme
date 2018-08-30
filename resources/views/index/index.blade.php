@@ -94,7 +94,10 @@
     </div>
 </div>
 <section class="middle-content">
-
+    Recently Discussed Topics
+</section>
+<section class="middle-content">
+    Recently Joined Users
 </section>
 @endsection
 

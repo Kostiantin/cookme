@@ -17,6 +17,7 @@
             <div class="col-md-4 col-sm-4 col-xs-12">
                 <div class="footer-links">
                     <ul class="links-set-2">
+                        <li><a href="{{ route('all_threads') }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> @lang('everywhere.all_threads')</a></li>
                         <li><a href="{{route('chat')}}" class="f-link"><i class="fa fa-bell" aria-hidden="true"></i> @lang('everywhere.ask_chef')</a></li>
                         <li><a href="#" class="f-link"><i class="fa fa-bell-o" aria-hidden="true"></i> @lang('everywhere.hire_chef')</a></li>
 
@@ -28,6 +29,7 @@
                     <ul class="links-set-3">
                         <li><a href="{{ route('register') }}" class="f-link"><i class="fa fa-user-circle-o" aria-hidden="true"></i> @lang('everywhere.register')</a></li>
                         <li><a href="{{ route('login') }}" class="f-link"><i class="fa fa-user-circle" aria-hidden="true"></i> @lang('everywhere.login')</a></li>
+                        <li><a href="{{ route('create_thread') }}" class="f-link"><i class="fa fa-comment-o" aria-hidden="true"></i> @lang('everywhere.new_thread')</a></li>
                     </ul>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    <title>{{ config('app.name', 'CookMe') }}</title>
+    <title>{{$thread->title}}</title>
 @endsection
 
 @section('content')
@@ -40,7 +40,7 @@
                     <form method="POST" action="{{route('add_reply_to_thread', ['thread' => $thread->id])}}">
                         {{csrf_field()}}
                         <div class="form-group">
-                            <textarea name="body" id="body" class="form-control" placeholder="Have something to say?" rows="5"></textarea>
+                            <textarea name="body" id="body" class="form-control" rows="5"></textarea>
                         </div>
                         @if (count($errors) > 0)
                             <div class="alert alert-danger">

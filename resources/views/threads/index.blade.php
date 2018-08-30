@@ -10,7 +10,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Threads</div>
+                    <div class="card-header"><h1>@lang('everywhere.all_threads')</h1></div>
 
                     <div class="card-body">
                         @foreach ($threads as $thread)
@@ -30,27 +30,5 @@
 @endsection
 
 @section('custom_js')
-    <script src="{{ asset('js/swiper.min.js') }}"></script>
 
-    <script>
-        var mySwiper = new Swiper ('.swiper-container', {
-            lazy: true,
-            preloadImages: true,
-            loadPrevNextAmount: 2,
-            loadPrevNext: true,
-            speed: 1100,
-            autoplay: {
-                delay: 10000
-            },
-            // Optional parameters
-            direction: 'vertical',
-            loop: true,
-
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true
-            }
-        });
-    </script>
 @endsection
