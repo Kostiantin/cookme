@@ -1,6 +1,6 @@
-# Cookme Blog with Chat (Laravel 5.6)
+# Cookme Forum/Blog with Chat (Laravel 5.6)
 
-This is a simple cooking blog based on Laravel 5.6. Here i also implemented a simple chat page based on: Laravel Echo, Vue and Pusher, where user can ask for help one of responsible chefs.  
+This is a cooking forum/blog based on Laravel 5.6. Here you can find forum and a simple chat page based on: Laravel Echo, Vue and Pusher, where user can ask for help one of responsible chefs.  
 After installing, the site should look like this:  
   Home page:  
   ![home page](https://github.com/Kostiantin/cookme/blob/master/public/img/screenshots/home_page_en.png)  
@@ -11,7 +11,7 @@ After installing, the site should look like this:
   Chat page:  
   ![chat](https://github.com/Kostiantin/cookme/blob/master/public/img/screenshots/cookme_chat.png)    
 
-This project can be used as a quick start for cooking blog and chat for helping users during cooking.  
+This project can be used as a quick start for cooking forum/blog and chat for helping users during cooking.  
 Also translations on three languages were implemented for this project: English, Ukrainian and Russian.  
 
 ## Getting Started
