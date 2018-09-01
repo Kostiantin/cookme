@@ -13,7 +13,7 @@
                     <div class="card-header"><h1>@lang('everywhere.new_thread')</h1></div>
 
                     <div class="card-body">
-                        <form method="POST" action="/threads">
+                        <form method="POST" action="{{route('add_thread')}}">
                             {{csrf_field()}}
                             <div class="form-group">
                                 <label for="title">@lang('everywhere.title')</label>
@@ -24,6 +24,14 @@
                                 <textarea class="form-control" name="body" id="body" rows="5">
 
                                 </textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="category_id">@lang('everywhere.category')</label>
+                                <select name="category_id" id="category_id" class="form-control">
+                                    @foreach($categories as $category)
+                                        <option value="{{$category->id}}">{{$category->name}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                             <div class="form-group">
                                 <button class="btn btn-medium btn-info">@lang('everywhere.publish')</button>

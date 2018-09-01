@@ -37,7 +37,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <h3>@lang('everywhere.give_your_comment')</h3>
-                    <form method="POST" action="{{route('add_reply_to_thread', ['thread' => $thread->id])}}">
+                    <form method="POST" action="{{route('add_reply_to_thread', ['category' => $thread->category->slug, 'thread' => $thread->id])}}">
                         {{csrf_field()}}
                         <div class="form-group">
                             <textarea name="body" id="body" class="form-control" rows="5"></textarea>

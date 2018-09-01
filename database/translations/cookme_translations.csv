@@ -165,3 +165,5 @@ ID,namespace,group,item,English,Ukrainian UA,Russian RU
 0,*,everywhere,title,Title,Заголовок,Название
 0,*,everywhere,body,Text,Текст,Текст
 0,*,everywhere,publish,Publish,Опублікувати,Опубликовать
+0,*,everywhere,categories,Categories,Категорії,Категории
+0,*,everywhere,category,Category,Категорія,Категория

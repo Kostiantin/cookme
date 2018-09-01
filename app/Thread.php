@@ -8,7 +8,7 @@ class Thread extends Model
 {
 
     protected $fillable = [
-        'user_id', 'title', 'body',
+        'user_id', 'title', 'body', 'category_id'
     ];
 
     public function replies()
@@ -20,6 +20,13 @@ class Thread extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+
     public function addReply($reply)
     {
         $this->replies()->create($reply);

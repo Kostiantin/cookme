@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class RepliesController extends Controller
 {
-    public function store(Thread $thread)
+    public function store($category_slug, Thread $thread)
     {
         $this->validate(request(),[
             'body' => 'required',

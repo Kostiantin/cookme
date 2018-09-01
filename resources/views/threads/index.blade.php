@@ -15,7 +15,7 @@
                     <div class="card-body">
                         @foreach ($threads as $thread)
                             <article>
-                                <h4><a href="/threads/{{$thread->id}}">{{$thread->title}}</a></h4>
+                                <h4><a href="{{route('show_thread',['category' => $thread->category->slug, 'thread' => $thread->id])}}">{{$thread->title}}</a></h4>
                                 <div class="body">
                                     {{$thread->body}}
                                 </div>

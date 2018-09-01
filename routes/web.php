@@ -22,9 +22,9 @@ Route::group(['prefix' => $localizer->localeFromRequest()], function(){
     // threads
     Route::get('/threads', 'ThreadsController@index')->name('all_threads');;
     Route::get('/threads/create', 'ThreadsController@create')->name('create_thread');
-    Route::get('/threads/{thread}', 'ThreadsController@show');
+    Route::get('/threads/{category}/{thread}', 'ThreadsController@show')->name('show_thread');
 
-    Route::post('/threads/{thread}/replies', 'RepliesController@store')->name('add_reply_to_thread');
+    Route::post('/threads/{category}/{thread}/replies', 'RepliesController@store')->name('add_reply_to_thread');
     Route::post('/threads', 'ThreadsController@store')->name('add_thread');
 
 });
