@@ -68,27 +68,5 @@
 @endsection
 
 @section('custom_js')
-    <script src="{{ asset('js/swiper.min.js') }}"></script>
 
-    <script>
-        var mySwiper = new Swiper ('.swiper-container', {
-            lazy: true,
-            preloadImages: true,
-            loadPrevNextAmount: 2,
-            loadPrevNext: true,
-            speed: 1100,
-            autoplay: {
-                delay: 10000
-            },
-            // Optional parameters
-            direction: 'vertical',
-            loop: true,
-
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true
-            }
-        });
-    </script>
 @endsection
