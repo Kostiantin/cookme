@@ -19,9 +19,17 @@ class ThreadsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($category_slug = null)
     {
-        $threads = Thread::latest()->get();
+
+        if (!empty($category_slug)) {
+            $category_id = Category::where('slug', $category_slug)->first()->id;
+            $threads = Thread::where('category_id', $category_id)->latest()->get();
+        }
+        else {
+            $threads = Thread::latest()->get();
+        }
+
         return view('threads.index', compact('threads'));
     }
 

@@ -47,6 +47,18 @@
                     </li>
                 @endif
                 <!-- Authentication Links -->
+                    <li><a href="{{ route('all_threads') }}">@lang('everywhere.all_threads')</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@lang('everywhere.categories') <span class="caret"></span></a>
+                        @if (!empty($categories))
+                            <ul class="dropdown-menu">
+                                @foreach($categories as $category)
+                                    <li><a href="{{route('category_all_threads', ['category' => $category->slug])}}">{{$category->name}}</a></li>
+                                @endforeach
+                            </ul>
+                        @endif
+                    </li>
+                    <li><a href="{{ route('create_thread') }}"> @lang('everywhere.new_thread')</a></li>
                 @if (Auth::guest())
                         <li class="nav-item dropdown user-links">
                             <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -84,8 +96,7 @@
                         </ul>
                     </li>
                 @endif
-                    <li><a href="{{ route('all_threads') }}">@lang('everywhere.all_threads')</a></li>
-                    <li><a href="{{ route('create_thread') }}"> @lang('everywhere.new_thread')</a></li>
+
             </ul>
         </div>
     </div>

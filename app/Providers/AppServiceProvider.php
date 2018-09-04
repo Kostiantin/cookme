@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
 use App\TranslatorLanguages;
+use App\Category;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,7 +25,10 @@ class AppServiceProvider extends ServiceProvider
 
             list($controller, $action) = explode('@', $controller);
 
-            $view->with(compact('controller', 'action'));
+            $categories = Category::orderBy('slug', 'ASC')->get();
+
+
+            $view->with(compact('controller', 'action', 'categories'));
         });
     }
 
