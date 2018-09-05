@@ -58,7 +58,6 @@
                             </ul>
                         @endif
                     </li>
-                    <li><a href="{{ route('create_thread') }}"> @lang('everywhere.new_thread')</a></li>
                 @if (Auth::guest())
                         <li class="nav-item dropdown user-links">
                             <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -81,6 +80,12 @@
                             <li>
                                 <a href="#">
                                     <i class="fa fa-address-book"></i>&nbsp;@lang('everywhere.profile')
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('create_thread') }}">
+                                    <i class="fa fa-bullhorn" aria-hidden="true"></i>
+                                    @lang('everywhere.new_thread')
                                 </a>
                             </li>
                             <li>

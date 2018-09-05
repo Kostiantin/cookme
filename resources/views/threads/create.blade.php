@@ -36,10 +36,10 @@
                             <div class="form-group">
                                 <label for="category_id">@lang('everywhere.category')</label>
                                 <select name="category_id" id="category_id" class="form-control">
-                                    {{--@foreach($categories as $category)
+                                        <option value="">@lang('everywhere.select')</option>
+                                    @foreach($categories as $category)
                                         <option value="{{$category->id}}" @if (old('category_id') == $category->id)selected @endif >{{$category->name}}</option>
-                                    @endforeach--}}
-                                    <option value="3333333">Tst</option>
+                                    @endforeach
                                 </select>
                                 @if (!empty($errors) && $errors->has('category_id'))
                                     <span class="text-danger">
