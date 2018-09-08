@@ -83,6 +83,12 @@
                                 </a>
                             </li>
                             <li>
+                                <a href="{{ route('all_threads') }}/?by={{auth()->user()->name}}">
+                                    <i class="fa fa-bullhorn" aria-hidden="true"></i>
+                                    @lang('everywhere.my_threads')
+                                </a>
+                            </li>
+                            <li>
                                 <a href="{{ route('create_thread') }}">
                                     <i class="fa fa-bullhorn" aria-hidden="true"></i>
                                     @lang('everywhere.new_thread')
