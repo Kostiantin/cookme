@@ -1,5 +1,15 @@
 /* sass variables */
 
+body {
+  background-image: url("/img/vegetables.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.common-content-block .row {
+  background-color: #fafafa;
+}
+
 /*custom navbar styles*/
 
 .navbar-transparent {

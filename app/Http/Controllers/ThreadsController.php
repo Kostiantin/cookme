@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Filters\ThreadFilters;
 use App\Thread;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
@@ -20,9 +21,10 @@ class ThreadsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($category_slug = null)
+    public function index($category_slug = null, ThreadFilters $filters)
     {
 
+        //$threads = Thread::filter($filters)->get();
         if (!empty($category_slug)) {
             $category_id = Category::where('slug', $category_slug)->first()->id;
             $threads = Thread::where('category_id', $category_id)->latest();
@@ -31,16 +33,9 @@ class ThreadsController extends Controller
             $threads = Thread::latest();
         }
 
-        $username = request('by');
 
-        if (!empty($username)) {
-            $user = User::where('name', $username)->first(); //user or null
-            if (!empty($user)) {
-                $threads->where('user_id', $user->id);
-            }
-        }
+        $threads = $threads->filter($filters)->get();
 
-        $threads = $threads->get();
         return view('threads.index', compact('threads'));
     }
 
