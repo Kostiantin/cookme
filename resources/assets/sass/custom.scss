@@ -2,21 +2,19 @@
 $red-alert-color: #d70d0d;
 
 body {
-  background-image: url("/img/vegetables.jpg");
+  /*background-image: url("/img/vegetables.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover;*/
 }
 .common-content-block {
   min-height: 500px;
 }
-.common-content-block .row {
-  background-color: #fafafa;
-}
+
 /*custom navbar styles*/
 .navbar-transparent {
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.6);
   border-color: transparent;
-  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
 }
 .navbar-default .navbar-brand,.navbar-default .navbar-nav > li > a {
   color: #fff;
@@ -440,4 +438,33 @@ body.stop-scrolling {
     .chat-main-container {
       margin-left: 0px;
     }
+}
+/* threads */
+.sidebar-thread-details ul {
+    padding: 0px;
+    margin: 0px;
+}
+.sidebar-thread-details ul li {
+    list-style-type: none;
+}
+.c-position-relative {
+    position: relative;
+}
+.c-position-static {
+    position: static!important;
+}
+.threads-header {
+    position: relative;
+}
+.cookme-comments {
+    color: #000;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.cookme-comments i {
+    color: #fe6d0d;
+}
+.cookme-comments i.no-comments {
+    color: #ddd;
 }

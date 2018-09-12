@@ -11,6 +11,15 @@ class Thread extends Model
         'user_id', 'title', 'body', 'category_id'
     ];
 
+    // global scope
+    protected static function boot()
+    {
+        parent::boot();
+        static::addGlobalScope('replyCount', function($builder) {
+            $builder->withCount('replies');
+        });
+    }
+
     public function replies()
     {
         return $this->hasMany(Reply::class);
