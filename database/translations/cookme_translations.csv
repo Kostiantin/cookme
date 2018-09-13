@@ -169,3 +169,10 @@ ID,namespace,group,item,English,Ukrainian UA,Russian RU
 0,*,everywhere,category,Category,Категорія,Категория
 0,*,everywhere,select,Select,Обрати,Выбрать
 0,*,everywhere,my_threads,My Threads,Мої Теми,Мои Темы
+0,*,everywhere,in_category,In Category,У Категорії,В Категории
+0,*,everywhere,thread_created,This thread was published,Ця тема була опублікована,Эта тема была опубликована
+0,*,everywhere,details,Details,Інформація,Информация
+0,*,everywhere,by_user,by user,користувачем,пользователем
+0,*,everywhere,has_replies,currently has replies,зараз має відповідей,сейчас имеет ответов
+0,*,everywhere,threads,Threads,Теми,Темы
+0,*,everywhere,popular_threads,Popular Threads,Популярні Теми,Популярные Темы

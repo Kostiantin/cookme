@@ -47,7 +47,23 @@
                     </li>
                 @endif
                 <!-- Authentication Links -->
-                    <li><a href="{{ route('all_threads') }}">@lang('everywhere.all_threads')</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@lang('everywhere.threads') <span class="caret"></span></a>
+
+                            <ul class="dropdown-menu">
+                                <li><a href="{{ route('all_threads') }}">@lang('everywhere.all_threads')</a></li>
+                                <li>
+                                    <a href="{{ route('all_threads') }}/?popular=1">
+                                        @lang('everywhere.popular_threads')
+                                    </a>
+                                </li>
+                            </ul>
+
+                    </li>
+
+
+
+
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@lang('everywhere.categories') <span class="caret"></span></a>
                         @if (!empty($categories))

@@ -11,7 +11,7 @@ class Thread extends Model
         'user_id', 'title', 'body', 'category_id'
     ];
 
-    // global scope
+    // global anonymous scope
     protected static function boot()
     {
         parent::boot();
