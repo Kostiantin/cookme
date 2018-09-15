@@ -55,7 +55,7 @@ These instructions will get you a copy of the project up and running on your loc
      password: admin  
      
    and Regular user credentials:  
-     login: regular@admin.com  
+     login: regular@regular.com  
      password: regular  
      
 8) Later if you need to add or change translations you need to do 3 things:  

@@ -32,4 +32,7 @@ Route::group(['prefix' => $localizer->localeFromRequest()], function(){
     Route::post('/threads/{category}/{thread}/replies', 'RepliesController@store')->name('add_reply_to_thread');
     Route::post('/threads', 'ThreadsController@store')->name('add_thread');
 
+    // favourites
+    Route::post('/replies/{reply}/favorites', 'FavoritesController@store')->name('favorite_reply');
+
 });

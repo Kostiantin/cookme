@@ -22,7 +22,15 @@ class UsersTableSeeder extends Seeder
 
         DB::table('users')->insert([
             'name' => 'Regular User',
-            'email' => 'regular@admin.com',
+            'email' => 'regular@regular.com',
+            'password' => Hash::make('regular'),
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'John Doe',
+            'email' => 'johndoe@regular.com',
             'password' => Hash::make('regular'),
             'created_at' => date("Y-m-d H:i:s"),
             'updated_at' => date("Y-m-d H:i:s"),
