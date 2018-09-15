@@ -589,3 +589,54 @@ body.stop-scrolling {
   color: #ddd;
 }
 
+.reply-header {
+  position: relative;
+}
+
+.reply-body {
+  padding-right: 45px;
+}
+
+.reply-header button.like-reply {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  cursor: pointer;
+  width: 45px;
+  height: 14px;
+  border: none;
+  background-color: transparent;
+  padding: 0px;
+  text-align: left;
+}
+
+.reply-header i.fa-thumbs-o-up.liked {
+  color: #02752d;
+}
+
+.reply-header button.like-reply:focus,
+.reply-header button.like-reply:hover,
+.reply-header button.like-reply:active {
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.likes-count {
+  border-radius: 50%;
+  bottom: 5px;
+  font-size: 8px;
+  border: 1px solid #eee;
+  width: 14px;
+  display: inline-block;
+  text-align: center;
+  background-color: #02752d;
+  color: #fff;
+  position: relative;
+  font-weight: bold;
+}
+
+button:focus {
+  outline: 0;
+}
+
