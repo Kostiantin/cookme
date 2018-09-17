@@ -35,4 +35,20 @@ Route::group(['prefix' => $localizer->localeFromRequest()], function(){
     // favourites
     Route::post('/replies/{reply}/favorites', 'FavoritesController@store')->name('favorite_reply');
 
+    // debug bar
+    if (app()->isLocal()) {
+        Route::get('/_debugbar/assets/stylesheets', [
+            'as' => 'debugbar-css',
+            'uses' => '\Barryvdh\Debugbar\Controllers\AssetController@css'
+        ]);
+
+        Route::get('/_debugbar/assets/javascript', [
+            'as' => 'debugbar-js',
+            'uses' => '\Barryvdh\Debugbar\Controllers\AssetController@js'
+        ]);
+    }
+
+
+
 });
+

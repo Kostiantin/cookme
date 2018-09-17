@@ -30,7 +30,7 @@ class ThreadsController extends Controller
             $threads = Thread::where('category_id', $category_id)->latest();
         }
         else {
-            $threads = Thread::latest();
+            $threads = Thread::with('category')->latest();
         }
 
 
