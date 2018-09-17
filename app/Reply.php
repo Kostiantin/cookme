@@ -12,6 +12,8 @@ class Reply extends Model
         'user_id', 'thread_id', 'body',
     ];
 
+    protected $with = ['user', 'favorites'];
+
     public function user()
     {
         return $this->belongsTo(User::class);
@@ -37,6 +39,6 @@ class Reply extends Model
 
     public function isFavorited()
     {
-        return $this->favorites()->where(['user_id' => auth()->id()])->exists();
+        return $this->favorites->where(['user_id' => auth()->id()])->count();
     }
 }
