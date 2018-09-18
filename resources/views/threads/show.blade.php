@@ -71,7 +71,7 @@
                     <div class="panel-body">
                         <ul>
                             <li>@lang('everywhere.thread_created') {{$thread->created_at->diffForHumans()}}</li>
-                            <li>@lang('everywhere.by_user') <a href="#">{{$thread->user->name}}</a></li>
+                            <li>@lang('everywhere.by_user') <a href="{{route('user_profile', $thread->user->name)}}">{{$thread->user->name}}</a></li>
                             <li class="c-position-relative">
                                 @if ($thread->replies_count > 0)
                                     <span class="cookme-comments c-position-static">{{$thread->replies_count}}&nbsp;<i class="fa fa-comments-o" aria-hidden="true"></i></span>

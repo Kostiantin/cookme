@@ -48,7 +48,8 @@ Route::group(['prefix' => $localizer->localeFromRequest()], function(){
         ]);
     }
 
-
+    // user profile
+    Route::get('/profiles/{user}', 'ProfilesController@show')->name('user_profile');
 
 });
 

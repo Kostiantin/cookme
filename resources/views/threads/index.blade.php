@@ -15,8 +15,11 @@
 
                         @foreach ($threads as $thread)
                             <article>
+                                <small>@lang('everywhere.thread_created') {{$thread->created_at->diffForHumans()}}
+                                    @lang('everywhere.by_user') <a href="{{route('user_profile', $thread->user->name)}}">{{$thread->user->name}}</a></small>
                                 <h4 class="threads-header">
-                                    <a href="{{route('show_thread',['category' => $thread->category->slug, 'thread' => $thread->id])}}">{{$thread->title}}</a>
+                                    <a href="{{route('show_thread',['category' => $thread->category->slug, 'thread' => $thread->id])}}">{{$thread->title}}</a>&nbsp;
+
                                     @if ($thread->replies_count > 0)
                                         <span class="cookme-comments">{{$thread->replies_count}}&nbsp;<i class="fa fa-comments-o" aria-hidden="true"></i></span>
 
