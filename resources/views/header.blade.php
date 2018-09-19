@@ -94,7 +94,7 @@
                         </a>
                         <ul class="dropdown-menu user-links" role="menu">
                             <li>
-                                <a href="#">
+                                <a href="{{route('user_profile', auth()->user()->name)}}">
                                     <i class="fa fa-address-book"></i>&nbsp;@lang('everywhere.profile')
                                 </a>
                             </li>

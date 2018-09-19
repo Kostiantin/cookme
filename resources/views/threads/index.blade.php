@@ -10,10 +10,11 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <h2>@lang('everywhere.all_threads')</h2>
-                <div class="panel panel-default">
-                    <div class="panel-body">
 
-                        @foreach ($threads as $thread)
+
+                @foreach ($threads as $thread)
+                    <div class="panel panel-default">
+                        <div class="panel-body">
                             <article>
                                 <small>@lang('everywhere.thread_created') {{$thread->created_at->diffForHumans()}}
                                     @lang('everywhere.by_user') <a href="{{route('user_profile', $thread->user->name)}}">{{$thread->user->name}}</a></small>
@@ -27,14 +28,16 @@
                                         <span class="cookme-comments"><i class="fa fa-comments-o no-comments" aria-hidden="true"></i></span>
                                     @endif
                                 </h4>
+                                <hr>
                                 <div class="body">
                                     {{$thread->body}}
                                 </div>
                             </article>
-                            <hr>
-                        @endforeach
+                        </div>
                     </div>
-                </div>
+
+                @endforeach
+
             </div>
             <div class="col-md-4">
                 <h2>@lang('everywhere.details')</h2>

@@ -28,6 +28,8 @@ Route::group(['prefix' => $localizer->localeFromRequest()], function(){
 
 
     Route::get('/threads/{category}/{thread}', 'ThreadsController@show')->name('show_thread');
+    Route::delete('/threads/{category}/{thread}', 'ThreadsController@destroy')->name('destroy_thread');
+
 
     Route::post('/threads/{category}/{thread}/replies', 'RepliesController@store')->name('add_reply_to_thread');
     Route::post('/threads', 'ThreadsController@store')->name('add_thread');

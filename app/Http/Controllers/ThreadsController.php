@@ -121,8 +121,10 @@ class ThreadsController extends Controller
      * @param  \App\Thread  $thread
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Thread $thread)
+    public function destroy($category_slug = null, Thread $thread)
     {
-        //
+        $thread->replies()->delete();
+        $thread->delete();
+        return back();
     }
 }
