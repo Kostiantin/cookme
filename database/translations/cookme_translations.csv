@@ -176,3 +176,6 @@ ID,namespace,group,item,English,Ukrainian UA,Russian RU
 0,*,everywhere,has_replies,currently has replies,зараз має відповідей,сейчас имеет ответов
 0,*,everywhere,threads,Threads,Теми,Темы
 0,*,everywhere,popular_threads,Popular Threads,Популярні Теми,Популярные Темы
+0,*,everywhere,joined,joined,приєднався,присоединился
+0,*,everywhere,no_threads_yet,No threads yet.,Ще немає тем.,Пока нет тем.
+0,*,everywhere,you_dont_have_permission,You don't have permissions to do this action,Ви не маєте дозволу це робити,У вас нет прав на эти действия

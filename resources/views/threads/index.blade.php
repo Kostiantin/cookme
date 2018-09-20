@@ -12,7 +12,7 @@
                 <h2>@lang('everywhere.all_threads')</h2>
 
 
-                @foreach ($threads as $thread)
+                @forelse ($threads as $thread)
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <article>
@@ -35,8 +35,9 @@
                             </article>
                         </div>
                     </div>
-
-                @endforeach
+                @empty
+                    @lang('everywhere.no_threads_yet')
+                @endforelse
 
             </div>
             <div class="col-md-4">

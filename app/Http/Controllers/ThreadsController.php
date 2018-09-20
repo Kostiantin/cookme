@@ -123,6 +123,10 @@ class ThreadsController extends Controller
      */
     public function destroy($category_slug = null, Thread $thread)
     {
+        if ($thread->user_id != auth()->id()) {
+            session()->flash('message', trans('everywhere.you_dont_have_permission'));
+            return back();
+        }
         $thread->replies()->delete();
         $thread->delete();
         return back();

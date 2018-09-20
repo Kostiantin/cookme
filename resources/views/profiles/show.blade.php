@@ -11,21 +11,22 @@
                 <h2>{{$user->name}} <small>@lang('everywhere.joined') {{$user->created_at->diffForHumans()}}</small></h2>
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        @if ($threads->count() > 0)
-                            <h2>@lang('everywhere.all_threads')</h2>
-                            @foreach ($threads as $thread)
+                            @forelse ($threads as $thread)
+                                <h2>@lang('everywhere.all_threads')</h2>
                                 <hr>
                                 <article>
                                     <div class="actions text-right">
-                                        <form method="POST" action="{{route('destroy_thread', ['category' => $thread->category->slug, 'thread' => $thread->id])}}">
-                                            {{csrf_field()}}
-                                            {{method_field('DELETE')}}
-                                            <button type="submit" class="btn btn-xs btn-danger">
+                                        @if ($thread->user_id == auth()->id())
+                                            <form method="POST" action="{{route('destroy_thread', ['category' => $thread->category->slug, 'thread' => $thread->id])}}">
+                                                {{csrf_field()}}
+                                                {{method_field('DELETE')}}
+                                                <button type="submit" class="btn btn-xs btn-danger">
 
-                                                <i class="fa fa-times" aria-hidden="true"></i>
+                                                    <i class="fa fa-times" aria-hidden="true"></i>
 
-                                            </button>
-                                        </form>
+                                                </button>
+                                            </form>
+                                        @endif
                                     </div>
                                     <h4 class="threads-header">
                                         <a href="{{route('show_thread',['category' => $thread->category->slug, 'thread' => $thread->id])}}">{{$thread->title}}</a>&nbsp; {{$thread->created_at->diffForHumans()}}
@@ -40,11 +41,11 @@
                                         {{$thread->body}}
                                     </div>
                                 </article>
-                            @endforeach
+
+                            @empty
+                                @lang('everywhere.no_threads_yet')
+                            @endforelse
                             {{$threads->links()}}
-                        @else
-                            no threads
-                        @endif
 
                     </div>
                 </div>
