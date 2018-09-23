@@ -18,6 +18,7 @@ class UsersTableSeeder extends Seeder
             'password' => Hash::make('admin'),
             'created_at' => date("Y-m-d H:i:s"),
             'updated_at' => date("Y-m-d H:i:s"),
+            'isSuperAdmin' => 1,
         ]);
 
         DB::table('users')->insert([

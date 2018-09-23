@@ -16,7 +16,7 @@
                                 <hr>
                                 <article>
                                     <div class="actions text-right">
-                                        @if ($thread->user_id == auth()->id())
+                                        @can('update', $thread)
                                             <form method="POST" action="{{route('destroy_thread', ['category' => $thread->category->slug, 'thread' => $thread->id])}}">
                                                 {{csrf_field()}}
                                                 {{method_field('DELETE')}}
@@ -26,7 +26,7 @@
 
                                                 </button>
                                             </form>
-                                        @endif
+                                        @endcan
                                     </div>
                                     <h4 class="threads-header">
                                         <a href="{{route('show_thread',['category' => $thread->category->slug, 'thread' => $thread->id])}}">{{$thread->title}}</a>&nbsp; {{$thread->created_at->diffForHumans()}}
