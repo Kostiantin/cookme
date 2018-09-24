@@ -125,10 +125,7 @@ class ThreadsController extends Controller
     {
         // authorize with the policy
         $this->authorize('update', $thread);
-        /*if ($thread->user_id != auth()->id()) {
 
-            return back();
-        }*/
         $thread->replies()->delete();
         $thread->delete();
         return back();
