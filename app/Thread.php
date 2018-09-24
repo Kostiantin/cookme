@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Thread extends Model
 {
+    use RecordsActivity;
 
     protected $fillable = [
         'user_id', 'title', 'body', 'category_id'
@@ -23,7 +24,11 @@ class Thread extends Model
         /*static::deleting(function($thread) {
             $thread->replies()->delete();
         });*/
+
+
     }
+
+
 
     public function replies()
     {

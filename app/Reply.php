@@ -7,6 +7,7 @@ use App\Favorite;
 
 class Reply extends Model
 {
+    use RecordsActivity;
 
     protected $fillable = [
         'user_id', 'thread_id', 'body',
