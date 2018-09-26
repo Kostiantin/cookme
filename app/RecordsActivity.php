@@ -19,9 +19,9 @@ trait RecordsActivity
         if (auth()->guest()) {return;}
 
         // activities, whenever a thread is created we track it in the activities table
-        static::created(function ($thread) {
+        /*static::created(function ($thread) {
             $thread->recordActivity('created');
-        });
+        });*/
 
         foreach (static::getRecordEvents() as $event) {
             static::$event(function ($model) use($event) {
@@ -41,7 +41,7 @@ trait RecordsActivity
 
     protected static function getRecordEvents()
     {
-        return ['created', 'deleted'];
+        return ['created'];// if you add an item here then you will need to add a view file with this name in the activities folder
     }
 
     protected function getActivityType($event)

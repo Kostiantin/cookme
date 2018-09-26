@@ -11,41 +11,16 @@
                 <h2>{{$user->name}} <small>@lang('everywhere.joined') {{$user->created_at->diffForHumans()}}</small></h2>
                 <div class="panel panel-default">
                     <div class="panel-body">
-                            @forelse ($threads as $thread)
-                                <h2>@lang('everywhere.all_threads')</h2>
-                                <hr>
-                                <article>
-                                    <div class="actions text-right">
-                                        @can('update', $thread)
-                                            <form method="POST" action="{{route('destroy_thread', ['category' => $thread->category->slug, 'thread' => $thread->id])}}">
-                                                {{csrf_field()}}
-                                                {{method_field('DELETE')}}
-                                                <button type="submit" class="btn btn-xs btn-danger">
-
-                                                    <i class="fa fa-times" aria-hidden="true"></i>
-
-                                                </button>
-                                            </form>
-                                        @endcan
-                                    </div>
-                                    <h4 class="threads-header">
-                                        <a href="{{route('show_thread',['category' => $thread->category->slug, 'thread' => $thread->id])}}">{{$thread->title}}</a>&nbsp; {{$thread->created_at->diffForHumans()}}
-                                        @if ($thread->replies_count > 0)
-                                            <span class="cookme-comments">{{$thread->replies_count}}&nbsp;<i class="fa fa-comments-o" aria-hidden="true"></i></span>
-
-                                        @else
-                                            <span class="cookme-comments"><i class="fa fa-comments-o no-comments" aria-hidden="true"></i></span>
-                                        @endif
-                                    </h4>
-                                    <div class="body">
-                                        {{$thread->body}}
-                                    </div>
-                                </article>
-
+                            @forelse ($activities as $date => $record)
+                                <h3>{{$date}}</h3>
+                                @foreach ($record as $activity)
+                                    <hr>
+                                    @include("profiles.activities.{$activity->type}")
+                                @endforeach
                             @empty
                                 @lang('everywhere.no_threads_yet')
                             @endforelse
-                            {{$threads->links()}}
+                            {{--{{$threads->links()}}--}}
 
                     </div>
                 </div>
