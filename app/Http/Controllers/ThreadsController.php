@@ -7,6 +7,7 @@ use App\Filters\ThreadFilters;
 use App\Thread;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
+use App\Activity;
 
 class ThreadsController extends Controller
 {
@@ -126,8 +127,15 @@ class ThreadsController extends Controller
         // authorize with the policy
         $this->authorize('update', $thread);
 
-        $thread->replies()->delete();
+        $thread->replies->each(function($reply) {
+            Activity::where(['user_id' => auth()->id(),'subject_id' => $reply->id, 'subject_type' => get_class($reply),])->delete();
+            $reply->delete();
+        });
+
+        Activity::where(['user_id' => auth()->id(),'subject_id' => $thread->id, 'subject_type' => get_class($thread),])->delete();
+
         $thread->delete();
+
         return back();
     }
 }

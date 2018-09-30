@@ -31,12 +31,18 @@ trait RecordsActivity
     }
 
     protected function recordActivity($event) {
-        Activity::create([
-            'user_id' => auth()->id(),
-            'type' => $this->getActivityType($event),
-            'subject_id' => $this->id,
-            'subject_type' => get_class($this),
-        ]);
+        //dd($event);
+        switch ($event) {
+            case 'created':
+                Activity::create([
+                    'user_id' => auth()->id(),
+                    'type' => $this->getActivityType($event),
+                    'subject_id' => $this->id,
+                    'subject_type' => get_class($this),
+                ]);
+                break;
+        }
+
     }
 
     protected static function getRecordEvents()
