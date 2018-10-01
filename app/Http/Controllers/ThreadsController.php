@@ -76,7 +76,7 @@ class ThreadsController extends Controller
             'body' => request('body'),
         ]);
 
-        return redirect('/threads/' . $category->slug . '/' . $thread->id);
+        return redirect('/threads/' . $category->slug . '/' . $thread->id)->with('flash-message', trans('everywhere.thread_created'));
     }
 
     /**
@@ -136,6 +136,6 @@ class ThreadsController extends Controller
 
         $thread->delete();
 
-        return back();
+        return back()->with('flash-message', trans('everywhere.thread_removed'));
     }
 }

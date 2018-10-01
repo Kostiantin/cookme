@@ -16,9 +16,14 @@ var moment = require('moment');
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-
+//flash messages
+window.events = new Vue();
+window.flash = function (flashmessage) {
+    window.events.$emit('flash', flashmessage);
+};
 
 Vue.component('example', require('./components/Example.vue'));
+Vue.component('flash-message', require('./components/FlashMessage.vue'));
 Vue.component('chat-message', require('./components/ChatMessage.vue'));
 Vue.component('chat-log', require('./components/ChatLog.vue'));
 Vue.component('chat-composer', require('./components/ChatComposer.vue'));
