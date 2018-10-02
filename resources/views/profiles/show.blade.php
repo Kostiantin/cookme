@@ -14,8 +14,10 @@
                             @forelse ($activities as $date => $record)
                                 <h3>{{$date}}</h3>
                                 @foreach ($record as $activity)
-                                    <hr>
-                                    @include("profiles.activities.{$activity->type}")
+                                    @if(view()->exists("profiles.activities.{$activity->type}"))
+                                        <hr>
+                                        @include("profiles.activities.{$activity->type}")
+                                    @endif
                                 @endforeach
                             @empty
                                 @lang('everywhere.no_threads_yet')
