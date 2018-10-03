@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Thread;
+use App\Reply;
 use Illuminate\Http\Request;
 
 class RepliesController extends Controller
@@ -18,5 +19,14 @@ class RepliesController extends Controller
         ]);
 
         return back()->with('flash-message', trans('everywhere.reply_created'));
+    }
+
+    public function destroy(Reply $reply)
+    {
+        $this->authorize('update', $reply);
+
+        $reply->delete();
+
+        return back();
     }
 }

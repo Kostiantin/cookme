@@ -36,6 +36,7 @@ Route::group(['prefix' => $localizer->localeFromRequest()], function(){
 
     // favourites
     Route::post('/replies/{reply}/favorites', 'FavoritesController@store')->name('favorite_reply');
+    Route::delete('/replies/{reply}', 'RepliesController@destroy')->name('destroy_reply');
 
     // debug bar
     if (app()->isLocal()) {

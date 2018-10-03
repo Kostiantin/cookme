@@ -1,6 +1,16 @@
 <article>
     <div class="actions text-right">
+        @can('update', $activity->subject)
+            <form method="POST" action="{{route('destroy_reply', ['reply' => $activity->subject->id])}}">
+                {{csrf_field()}}
+                {{method_field('DELETE')}}
+                <button type="submit" class="btn btn-xs btn-danger">
 
+                    <i class="fa fa-times" aria-hidden="true"></i>
+
+                </button>
+            </form>
+        @endcan
     </div>
     <h4 class="threads-header">
         <small>@lang('everywhere.replied') @lang('everywhere.to') <a href="{{route('show_thread', ['category' => $activity->subject->thread->category->slug, 'thread' => $activity->subject->thread->id])}}">{{$activity->subject->thread->title}}</a> {{$activity->subject->created_at->diffForHumans()}}</small>
