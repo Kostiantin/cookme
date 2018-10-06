@@ -28,11 +28,11 @@
 
 
 
-@if($controller != 'ChatController')
+
 <div id="app">
     <flash-message flashmessage="{{ session('flash-message') }}"></flash-message>
-</div>
-@endif
+
+
 @include('header')
 @if($controller == 'IndexController' && $action == 'index')
     @yield('content')
@@ -43,7 +43,7 @@
     @yield('content')
 
 @endif
-
+</div>
 
 <!-- Scripts -->
 @include('layouts.scripts')

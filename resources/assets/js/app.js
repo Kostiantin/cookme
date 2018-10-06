@@ -23,7 +23,13 @@ window.flash = function (flashmessage) {
 };
 
 Vue.component('example', require('./components/Example.vue'));
+// quick messages
 Vue.component('flash-message', require('./components/FlashMessage.vue'));
+
+// reply editing component
+Vue.component('reply', require('./components/Reply.vue'));
+
+// chat components
 Vue.component('chat-message', require('./components/ChatMessage.vue'));
 Vue.component('chat-log', require('./components/ChatLog.vue'));
 Vue.component('chat-composer', require('./components/ChatComposer.vue'));

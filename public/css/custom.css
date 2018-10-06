@@ -627,3 +627,7 @@ button:focus {
   outline: 0;
 }
 
+[v-cloak] {
+  display: none;
+}
+

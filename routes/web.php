@@ -38,6 +38,8 @@ Route::group(['prefix' => $localizer->localeFromRequest()], function(){
     Route::post('/replies/{reply}/favorites', 'FavoritesController@store')->name('favorite_reply');
     Route::delete('/replies/{reply}', 'RepliesController@destroy')->name('destroy_reply');
 
+    Route::patch('/replies/{reply}', 'RepliesController@update')->name('update_reply');
+
     // debug bar
     if (app()->isLocal()) {
         Route::get('/_debugbar/assets/stylesheets', [

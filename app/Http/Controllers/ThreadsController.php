@@ -128,7 +128,7 @@ class ThreadsController extends Controller
         $this->authorize('update', $thread);
 
         $thread->replies->each(function($reply) {
-            Activity::where(['user_id' => auth()->id(),'subject_id' => $reply->id, 'subject_type' => get_class($reply),])->delete();
+            Activity::where(['subject_id' => $reply->id, 'subject_type' => get_class($reply),])->delete();
             $reply->delete();
         });
 

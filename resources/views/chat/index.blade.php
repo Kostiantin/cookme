@@ -7,7 +7,7 @@
 @section('content')
 <div id="chat-room-container">
     <div class="container">
-        <div id="app">
+
             <div class="row" >
                 <div class="col-xs-12 col-sm-8 col-md-8">
                     <div class="chat-main-container">
@@ -27,7 +27,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+
 
     </div>
 </div>

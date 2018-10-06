@@ -179,3 +179,15 @@ ID,namespace,group,item,English,Ukrainian UA,Russian RU
 0,*,everywhere,joined,joined,приєднався,присоединился
 0,*,everywhere,no_threads_yet,No threads yet.,Ще немає тем.,Пока нет тем.
 0,*,everywhere,you_dont_have_permission,You don't have permissions to do this action,Ви не маєте дозволу це робити,У вас нет прав на эти действия
+0,*,everywhere,you,you,Вы,Ви
+0,*,everywhere,favorited,favorited,лайкнули,лайкнули
+0,*,everywhere,reply,reply,коментар,комментарий
+0,*,everywhere,in,in,у,в
+0,*,everywhere,thread,thread,темі,теме
+0,*,everywhere,cancel,Cancel,Відмінити,Отменить
+0,*,everywhere,edit,Edit,Редактувати,Редактировать
+0,*,everywhere,update,Update,Оновити,Обновить
+0,*,everywhere,to,to,на,на
+0,*,everywhere,by,by,,
+0,*,everywhere,replied,replied,відповів,ответил
+0,*,everywhere,reply_created,reply created,коментар створений,коментарий добавлен
