@@ -1,17 +1,10 @@
 <reply :attributes="{{$activity->subject}}" inline-template v-cloak>
-    <article>
+    <article id="reply-{{$activity->subject->id}}" v-if="visible_element">
         <div class="actions text-right">
             @can('update', $activity->subject)
             <button class="btn btn-xs" @click="editing=true">@lang('everywhere.edit')</button>
-            <form method="POST" action="{{route('destroy_reply', ['reply' => $activity->subject->id])}}">
-                {{csrf_field()}}
-                {{method_field('DELETE')}}
-                <button type="submit" class="btn btn-xs btn-danger">
+            <button class="btn btn-xs" @click="destroy"><i class="fa fa-times" aria-hidden="true"></i></button>
 
-                    <i class="fa fa-times" aria-hidden="true"></i>
-
-                </button>
-            </form>
             @endcan
         </div>
         <h4 class="threads-header">

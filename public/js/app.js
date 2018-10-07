@@ -64986,7 +64986,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     data: function data() {
         return {
             editing: false,
-            body: this.attributes.body
+            body: this.attributes.body,
+            visible_element: true
         };
     },
 
@@ -64997,6 +64998,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             });
 
             this.editing = false;
+        },
+        destroy: function destroy() {
+            axios.delete('/replies/' + this.attributes.id);
+            this.visible_element = false;
         }
     }
 });
