@@ -474,8 +474,8 @@ body.stop-scrolling {
     padding: 0px;
     text-align: left;
 }
-.reply-header i.fa-thumbs-o-up.liked {
-    color: #02752d;
+.reply-header button.like-reply.liked span.glyphicon-heart {
+    color: #f00;
 }
 .reply-header button.like-reply:focus,.reply-header button.like-reply:hover, .reply-header button.like-reply:active {
     border: none!important;

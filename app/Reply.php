@@ -15,6 +15,8 @@ class Reply extends Model
 
     protected $with = ['user', 'favorites'];
 
+    protected $appends = ['isFavorited'];
+
     public function user()
     {
         return $this->belongsTo(User::class);
@@ -38,8 +40,21 @@ class Reply extends Model
         }
     }
 
+    public function unfavorite()
+    {
+        $attributes = ['user_id' => auth()->id()];
+
+        // we are in the reply instance at this point
+        $this->favorites()->where($attributes)->delete();
+    }
+
     public function isFavorited()
     {
         return $this->favorites->where('user_id', auth()->id())->count();
+    }
+
+    public function getIsFavoritedAttribute()// get result of the function isFavorited as a property
+    {
+        return $this->isFavorited();
     }
 }
