@@ -122,6 +122,15 @@ class ThreadsTableSeeder extends Seeder
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ]);
+
+            DB::table('activities')->insert([
+                'user_id' => $thread['user_id'],
+                'subject_id' => $thread_id,
+                'subject_type' => 'App\Thread',
+                'type' => 'created_thread',
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
+            ]);
         }
 
         // add all replies
@@ -134,6 +143,16 @@ class ThreadsTableSeeder extends Seeder
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ]);
+
+            DB::table('activities')->insert([
+                'user_id' => $reply['user_id'],
+                'subject_id' => $reply_id,
+                'subject_type' => 'App\Reply',
+                'type' => 'created_reply',
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
+            ]);
+
         }
     }
 }
