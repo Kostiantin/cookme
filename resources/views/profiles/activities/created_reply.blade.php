@@ -2,10 +2,10 @@
     <article id="reply-{{$activity->subject->id}}" v-if="visible_element">
         <div class="actions text-right">
             @can('update', $activity->subject)
-            <button class="btn btn-xs" @click="editing=true">@lang('everywhere.edit')</button>
-            <button class="btn btn-xs" @click="destroy"><i class="fa fa-times" aria-hidden="true"></i></button>
-
+                <button class="btn btn-xs" @click="editing=true">@lang('everywhere.edit')</button>
+                <button class="btn btn-xs" @click="destroy"><i class="fa fa-times" aria-hidden="true"></i></button>
             @endcan
+                <favorite :reply="{{$activity->subject}}"></favorite>
         </div>
         <h4 class="threads-header">
             <small>@lang('everywhere.replied') @lang('everywhere.to') <a href="{{route('show_thread', ['category' => $activity->subject->thread->category->slug, 'thread' => $activity->subject->thread->id])}}">{{$activity->subject->thread->title}}</a> {{$activity->subject->created_at->diffForHumans()}}</small>

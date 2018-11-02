@@ -21,7 +21,13 @@
 @if($controller == 'IndexController' && $action == 'index')
     <link href="{{ asset('css/swiper.min.css') }}" rel="stylesheet">
 @endif
-
+{{--<script>
+    window.App = {!! json_encode([
+            'csrfToken' => csrf_field(),
+            'signedIn' => Auth::check(),
+        ])
+    !!};
+</script>--}}
 </head>
 <body>
 @include('layouts.facebook')

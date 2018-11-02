@@ -18,8 +18,11 @@
 
             },
             destroy() {
-                axios.delete('/replies/'+this.attributes.id);
-                this.visible_element = false;
+                if (confirm("Are you sure")) {
+                    axios.delete('/replies/'+this.attributes.id);
+                    this.visible_element = false;
+                }
+
             }
 
 
