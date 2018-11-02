@@ -576,18 +576,26 @@ body.stop-scrolling {
   color: #ddd;
 }
 
-.reply-header {
+.reply-header,
+.actions-reply {
   position: relative;
+}
+
+.actions-reply {
+  float: right;
+  width: 20%;
+}
+
+.author-reply {
+  float: left;
+  width: 80%;
 }
 
 .reply-body {
   padding-right: 45px;
 }
 
-.reply-header button.like-reply {
-  position: absolute;
-  right: 0px;
-  top: 10px;
+button.like-reply {
   cursor: pointer;
   width: 45px;
   height: 14px;
@@ -597,13 +605,13 @@ body.stop-scrolling {
   text-align: left;
 }
 
-.reply-header button.like-reply.liked span.glyphicon-heart {
+button.like-reply.liked span.glyphicon-heart {
   color: #f00;
 }
 
-.reply-header button.like-reply:focus,
-.reply-header button.like-reply:hover,
-.reply-header button.like-reply:active {
+button.like-reply:focus,
+button.like-reply:hover,
+button.like-reply:active {
   border: none !important;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
