@@ -21,11 +21,10 @@
                 if (confirm("Are you sure")) {
                     axios.delete('/replies/'+this.attributes.id);
                     this.visible_element = false;
+                    this.$emit('replyremoved');
                 }
 
             }
-
-
         }
     }
 </script>

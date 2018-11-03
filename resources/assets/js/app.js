@@ -28,6 +28,8 @@ Vue.component('flash-message', require('./components/FlashMessage.vue'));
 
 // reply editing component
 Vue.component('reply', require('./components/Reply.vue'));
+Vue.component('thread-view', require('./pages/Thread.vue'));
+
 Vue.component('favorite', require('./components/Favorite.vue'));
 
 // chat components
